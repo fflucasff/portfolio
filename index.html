@@ -3,266 +3,445 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Lucas Figueiredo Fernandes</title>
+  <title>LFF Industries | Digital Engineering & Performance</title>
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Meta descrição para SEO básico -->
+  <!-- SEO básico -->
   <meta
     name="description"
-    content="Portfólio de Lucas Figueiredo Fernandes — Desenvolvedor Web Full-stack com foco em React, TypeScript, Python (FastAPI), PostgreSQL e estruturas para tráfego pago e tracking."
+    content="LFF Industries — estúdio de engenharia digital focado em sites, aplicações web e estruturas de tracking orientadas a performance."
   />
 </head>
+
 <body>
-  <!-- Navegação fixa simples -->
+  <!-- Background orbs -->
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="bg-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Header -->
   <header class="header">
     <div class="container header-content">
-      <div class="logo">Lucas FF</div>
-      <nav class="nav">
+      <div class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">LFF Industries</span>
+      </div>
+
+      <nav class="nav" aria-label="Navegação principal">
         <a href="#hero">Início</a>
+        <a href="#services">Soluções</a>
+        <a href="#offer">Metodologia</a>
+        <a href="#projects">Cases</a>
         <a href="#about">Sobre</a>
-        <a href="#services">Serviços</a>
-        <a href="#projects">Projetos</a>
         <a href="#contact">Contato</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO: Introdução e CTA -->
+  <!-- CTA flutuante -->
+  <a
+    class="floating-cta"
+    href="https://wa.me/5535991796968?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20projeto%20digital%20com%20a%20LFF%20Industries%20e%20gostaria%20de%20receber%20uma%20proposta."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Solicitar proposta
+  </a>
+
+  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="container hero-grid">
-      <!-- Texto principal -->
       <div class="hero-text" data-reveal>
-        <p class="hero-tag">Dev que entende de código e de venda</p>
-        <h1>
-          Eu construo páginas, sistemas e funis que não só funcionam.
-          Eles convertem.
-        </h1>
-        <p class="hero-subtitle">
-          Sou Lucas Figueiredo Fernandes, desenvolvedor web full-stack e estudante
-          de Engenharia de Computação no INATEL. Eu uno código limpo com visão de
-          negócio: landing pages, sistemas internos, dashboards e integrações com
-          tráfego e tracking (YouTube, Taboola, Outbrain, RedTrack, CartPanda).
-          O objetivo é simples: transformar visitas em resultado real para o seu negócio.
+        <p class="hero-tag">
+          <span class="dot"></span>
+          LFF Industries • Digital Engineering & Performance
         </p>
+
+        <h1 class="hero-title">
+          Estruturamos sites, aplicações e tracking
+          <span class="gradient-text">prontos para captar, vender e escalar.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A LFF Industries é um estúdio de engenharia digital especializado em
+          <strong>sites institucionais, landing pages, aplicações web e estruturas de mensuração</strong>.
+          Combinamos arquitetura de software, design funcional e tracking para que cada projeto
+          esteja preparado para <strong>operações de tráfego e crescimento consistente</strong>.
+        </p>
+
         <div class="hero-actions">
-          <a href="#projects" class="btn primary">Ver projetos na prática</a>
-          <a href="#services" class="btn secondary">Ver o que posso fazer por você</a>
+          <a
+            class="btn primary magnetic"
+            href="https://wa.me/5535991796968?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20projeto%20digital%20com%20a%20LFF%20Industries%20e%20gostaria%20de%20receber%20uma%20proposta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar reunião estratégica
+          </a>
+
+          <a href="#projects" class="btn secondary magnetic">
+            Ver cases em produção
+          </a>
         </div>
-        <div class="hero-meta">
-          <span>Sites • Sistemas • Landing pages • Tracking • Integrações</span>
+
+        <div class="hero-badges">
+          <span class="badge">Sites e Landings de alta performance</span>
+          <span class="badge">Aplicações Web sob medida</span>
+          <span class="badge">Implementação de tracking e UTMs</span>
+          <span class="badge">Pronto para tráfego pago</span>
+        </div>
+
+        <div class="hero-micro">
+          <span>Arquitetura pensada para performance e mensuração.</span>
+          <span>Entrega orientada a resultado, não apenas layout.</span>
         </div>
       </div>
 
-      <!-- Foto / avatar -->
-      <div class="hero-photo-wrapper" data-reveal>
-        <div class="hero-photo">
+      <div class="hero-visual" data-reveal>
+        <div class="hero-photo tilt">
           <img
             src="assets/img/imagem_perfil.png"
-            alt="Foto de Lucas Figueiredo Fernandes"
+            alt="Equipe LFF Industries"
           />
+          <div class="photo-ring" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-mini-cards">
+          <div class="mini-card tilt">
+            <p class="mini-title">Entrega orientada a negócio</p>
+            <p class="mini-desc">
+              Projetos desenhados a partir de metas claras de captação, conversão e retenção.
+            </p>
+          </div>
+          <div class="mini-card tilt">
+            <p class="mini-title">Stack moderna</p>
+            <p class="mini-desc">
+              React, TypeScript, Python, PostgreSQL e integrações com ecossistema de tráfego.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE MIM / HABILIDADES -->
-  <section id="about" class="section" data-reveal>
+  <!-- SERVIÇOS / SOLUÇÕES -->
+  <section id="services" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Quem sou na prática</h2>
+      <h2 class="section-title">Soluções LFF Industries</h2>
       <p class="section-description">
-        Mais do que “fazer site”, meu foco é estruturar presença digital que gera
-        resultado. Venho da Engenharia de Computação no INATEL e atuo como
-        desenvolvedor web, apoiando negócios que precisam de páginas rápidas,
-        estáveis e pensadas para performance — tanto técnica quanto comercial.
+        A LFF Industries projeta e desenvolve ativos digitais completos — do front-end ao tracking —
+        para empresas que precisam operar com previsibilidade e escala.
       </p>
 
-      <div class="about-grid">
-        <div class="card" data-reveal>
-          <h3>Stack principal</h3>
-          <ul class="skills-list">
-            <li>Front-end com React + TypeScript</li>
-            <li>Back-end com Python (FastAPI)</li>
-            <li>Banco de dados com PostgreSQL</li>
-            <li>Estilização moderna com Tailwind CSS</li>
-            <li>Versionamento com Git e GitHub</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3>Visão orientada a negócio</h3>
-          <ul class="skills-list">
-            <li>Criação de landing pages focadas em conversão</li>
-            <li>Integração com tracking (RedTrack, pixels, parâmetros UTM)</li>
-            <li>Estruturação de páginas para campanhas (YouTube, Taboola, Outbrain)</li>
-            <li>Experiência com checkouts como CartPanda e funis de venda</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3>Como trabalho</h3>
+      <div class="services-grid">
+        <article class="service-card tilt" data-reveal>
+          <div class="service-icon">🏢</div>
+          <h3>Sites institucionais de alta autoridade</h3>
           <p>
-            Começo entendendo o objetivo do projeto (captar leads, vender,
-            validar uma oferta) e, a partir disso, desenho a estrutura técnica:
-            páginas, componentes, integrações e métricas que realmente importam.
-            Comunicação clara, entregas frequentes e foco em manter tudo simples
-            de operar no dia a dia.
+            Presença digital sólida, com arquitetura clara, conteúdo organizado e estética profissional.
+          </p>
+          <ul class="service-points">
+            <li>Design responsivo e alinhado à marca</li>
+            <li>Estrutura preparada para SEO e campanhas</li>
+            <li>Performance otimizada para desktop e mobile</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt" data-reveal>
+          <div class="service-icon">🎯</div>
+          <h3>Landing pages focadas em conversão</h3>
+          <p>
+            Páginas específicas para campanhas, com narrativa, prova social e CTA claros.
+          </p>
+          <ul class="service-points">
+            <li>Fluxo de leitura orientado a decisão</li>
+            <li>Elementos preparados para testes A/B</li>
+            <li>Integração com formulários, CRM e automações</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt" data-reveal>
+          <div class="service-icon">📊</div>
+          <h3>Aplicações web e painéis</h3>
+          <p>
+            Sistemas e dashboards sob medida para organizar operações e disponibilizar indicadores-chave.
+          </p>
+          <ul class="service-points">
+            <li>React + APIs em Python (FastAPI)</li>
+            <li>Modelagem de dados com PostgreSQL</li>
+            <li>Interfaces objetivas para uso diário</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt" data-reveal>
+          <div class="service-icon">🔎</div>
+          <h3>Tracking, mensuração e integrações</h3>
+          <p>
+            Implementação estruturada de tags, pixels, UTMs e trackers para leitura confiável de resultados.
+          </p>
+          <ul class="service-points">
+            <li>Configuração de UTMs e eventos</li>
+            <li>Integração com trackers e checkouts</li>
+            <li>Base pronta para otimização de mídia</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA / OFERTA -->
+  <section id="offer" class="section">
+    <div class="container">
+      <h2 class="section-title">Metodologia LFF Industries</h2>
+      <p class="section-description">
+        Cada projeto segue um fluxo estruturado para garantir clareza, previsibilidade e
+        um ativo digital pronto para ser escalado.
+      </p>
+
+      <div class="proof-grid">
+        <div class="proof-card tilt" data-reveal>
+          <h3>1. Diagnóstico e escopo</h3>
+          <p>
+            Entendimento do modelo de negócio, canais de aquisição e objetivos.
+            A partir disso, definimos escopo técnico, mapa de páginas e integrações necessárias.
+          </p>
+        </div>
+
+        <div class="proof-card tilt" data-reveal>
+          <h3>2. Arquitetura e design funcional</h3>
+          <p>
+            Estruturação da arquitetura de informação, wireframes, hierarquia de conteúdo
+            e proposta visual alinhada ao posicionamento da marca.
+          </p>
+        </div>
+
+        <div class="proof-card tilt" data-reveal>
+          <h3>3. Implementação, testes e tracking</h3>
+          <p>
+            Desenvolvimento, testes, otimização de performance e configuração de tracking
+            para que o projeto seja entregue pronto para operação e análise de resultados.
           </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SERVIÇOS / OFERTA -->
-  <section id="services" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">O que posso fazer pelo seu negócio</h2>
-      <p class="section-description">
-        Minha entrega é ponta a ponta: da página até o tracking. Você não precisa
-        “correr atrás de um dev” toda vez que mudar campanha ou oferta.
-      </p>
-
-      <div class="about-grid">
-        <div class="card" data-reveal>
-          <h3>Landing pages de alta conversão</h3>
-          <ul class="skills-list">
-            <li>Páginas pensadas para tráfego em YouTube, Taboola e Outbrain</li>
-            <li>Layout responsivo, rápido e pronto para rodar anúncio</li>
-            <li>Estrutura para copy, prova social e CTA forte</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3>Tracking e integrações</h3>
-          <ul class="skills-list">
-            <li>Integração com RedTrack e outros trackers</li>
-            <li>Organização de parâmetros UTM e eventos</li>
-            <li>Base técnica para leitura clara de dados e otimização</li>
-          </ul>
-        </div>
-
-        <div class="card" data-reveal>
-          <h3>Sites e sistemas sob medida</h3>
-          <ul class="skills-list">
-            <li>Sites institucionais enxutos e profissionais</li>
-            <li>Dashboards e sistemas em React + API (FastAPI)</li>
-            <li>Arquitetura pensada para evoluir junto com o negócio</li>
-          </ul>
-        </div>
+      <div class="proof-cta" data-reveal>
+        <p>
+          A LFF Industries atua de ponta a ponta: concepção, implementação e mensuração.
+          O resultado é um ativo digital robusto, alinhado à estratégia da empresa.
+        </p>
+        <a
+          class="btn primary magnetic"
+          href="https://wa.me/5535991796968?text=Gostaria%20de%20avaliar%20um%20projeto%20digital%20com%20a%20LFF%20Industries.%20Podem%20agendar%20uma%20conversa%20estrat%C3%A9gica%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Iniciar avaliação de projeto
+        </a>
       </div>
     </div>
   </section>
 
-    <!-- PROJETOS -->
+  <!-- PROJETOS / CASES -->
   <section id="projects" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Projetos em destaque</h2>
+      <h2 class="section-title">Cases e projetos em destaque</h2>
       <p class="section-description">
-        Alguns projetos que traduzem meu jeito de trabalhar: foco em solução,
-        código limpo e aderência ao objetivo de negócio.
+        Alguns exemplos que ilustram a abordagem da LFF Industries em termos de experiência,
+        arquitetura e clareza de informação.
       </p>
 
       <div class="projects-grid">
-        <!-- Projeto 1: Mini Calculadora de Frete Postaqui -->
-        <article class="project-card" data-reveal>
-          <h3>Mini Calculadora de Frete Postaqui</h3>
-          <p class="project-meta">
-            React • TypeScript • Styled Components
-          </p>
-          <p class="project-text">
-            Desafio técnico desenvolvido para a Postaqui Logística: uma
-            calculadora de frete em múltiplos passos, com validação de campos,
-            preenchimento de exemplos, visual moderno e experiência pensada
-            para qualquer usuário entender o processo de cotação em poucos cliques.
-          </p>
-          <div class="project-links">
-            <!-- TROCAR PELA URL REAL DA SUA PÁGINA PUBLICADA -->
-            <a
-              href="https://fflucasff.github.io/postaqui-desafio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn primary"
-            >
-              Ver página funcionando
-            </a>
+        <!-- Projeto 1: Controle de Gastos -->
+        <article class="project-card tilt" data-reveal>
+          <div class="project-media">
+  <img
+    src="assets/img/controle-gastos-preview.png"
+    alt="Dashboard Controle de Gastos"
+    loading="lazy"
+  />
+</div>
 
-            <!-- Opcional: preview em imagem (coloque um print em assets/img/postaqui-preview.png) -->
+
+          <h3>Controle de Gastos</h3>
+          <p class="project-meta">Dashboard financeiro • React • Visual analítico</p>
+          <p class="project-text">
+            Interface para registro e acompanhamento de despesas por categoria, com visualização consolidada
+            e foco em leitura rápida das informações financeiras. Experiência pensada para pessoas que querem
+            clareza sem a complexidade de ERPs tradicionais.
+          </p>
+
+          <div class="project-links">
             <a
-              href="assets/img/postaqui-preview.png"
+              class="btn primary magnetic"
+              href="https://fflucasff.github.io/Controle-de-Gastos/"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn tertiary"
             >
-              Ver layout em imagem
+              Acessar dashboard
+            </a>
+            <a
+              class="btn tertiary magnetic"
+              href="https://github.com/fflucasff/Controle-de-Gastos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Código-fonte
             </a>
           </div>
         </article>
 
-        <!-- Projeto 2: Controle de Gastos -->
-        <article class="project-card" data-reveal>
-          <h3>Controle de Gastos</h3>
-          <p class="project-meta">
-            React • TypeScript • Tailwind CSS
-          </p>
-          <p class="project-text">
-            Aplicação web para controle financeiro pessoal, com cadastro de
-            despesas por categoria, visualização em cards e gráfico de gastos.
-            Pensado para ser simples de usar, trazendo clareza rápida sobre
-            onde o dinheiro está indo — sem depender de planilhas confusas.
-          </p>
-          <div class="project-links">
-            <!-- TROCAR PELA URL REAL DA SUA PÁGINA PUBLICADA -->
-            <a
-              href="https://fflucasff.github.io/Controle-de-Gastos/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn primary"
-            >
-              Ver dashboard ao vivo
-            </a>
+        <!-- Projeto 2: Calculadora de Fretes Postaqui -->
+        <article class="project-card tilt" data-reveal>
+          <div class="project-media">
+            <img
+              src="assets/img/postaqui-preview.png"
+              alt="Mini calculadora de frete"
+              loading="lazy"
+            />
+          </div>
 
+          <h3>Mini Calculadora de Frete Postaqui</h3>
+          <p class="project-meta">Aplicação web • Fluxo guiado • UX focada em clareza</p>
+          <p class="project-text">
+            Aplicação multi-step para simulação de frete, desenvolvida em desafio técnico. Estrutura de formulário
+            guiado, validação de campos e layout responsivo, garantindo que qualquer usuário consiga simular fretes
+            sem fricção.
+          </p>
+
+          <div class="project-links">
             <a
-              href="https://github.com/fflucasff"
+              class="btn primary magnetic"
+              href="https://fflucasff.github.io/postaqui-desafio/"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn tertiary"
             >
-              Ver código no GitHub
+              Acessar aplicação
+            </a>
+            <a
+              class="btn tertiary magnetic"
+              href="https://github.com/fflucasff/postaqui-desafio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Código-fonte
             </a>
           </div>
         </article>
 
         <!-- Projeto 3: Amor em Códigos -->
-        <article class="project-card" data-reveal>
-          <h3>Amor em Códigos (Landing pages personalizadas)</h3>
-          <p class="project-meta">
-            Landing Pages • HTML/CSS • JavaScript
-          </p>
-          <p class="project-text">
-            Projeto focado em criar páginas personalizadas para casais,
-            explorando storytelling, design emocional e CTA claro. Uma vitrine
-            de como é possível transformar qualquer ideia em uma página bonita,
-            responsiva e pronta para ser divulgada — inclusive para negócios.
-          </p>
-          <div class="project-links">
-            <!-- TROCAR PELA URL REAL DE UMA LANDING EXEMPLO -->
-            <a
-              href="https://fflucasff.github.io/amor-em-codigos"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn primary"
-            >
-              Ver landing page exemplo
-            </a>
+        <article class="project-card tilt" data-reveal>
+          <div class="project-media">
+  <img
+    src="assets/img/amor-em-codigos-preview.png"
+    alt="Landing Amor em Códigos"
+    loading="lazy"
+  />
+</div>
 
+
+          <h3>Amor em Códigos</h3>
+          <p class="project-meta">Landing page temática • Storytelling • Experiência emocional</p>
+          <p class="project-text">
+            Landing page personalizada para casais, com narrativa, elementos visuais e estrutura pensada para
+            criar uma experiência memorável. Demonstra a capacidade de desenvolver páginas com forte apelo
+            emocional e estética diferenciada.
+          </p>
+
+          <div class="project-links">
             <a
-              href="https://github.com/fflucasff"
+              class="btn primary magnetic"
+              href="https://fflucasff.github.io/amor-em-codigos/"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn tertiary"
             >
-              Ver mais projetos
+              Ver landing
+            </a>
+            <a
+              class="btn tertiary magnetic"
+              href="https://github.com/fflucasff/amor-em-codigos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Código-fonte
+            </a>
+          </div>
+        </article>
+
+        <!-- Projeto 4: Landing Dragon Ball -->
+        <article class="project-card tilt" data-reveal>
+          <div class="project-media">
+  <img
+    src="assets/img/dragon-ball-preview.png"
+    alt="Landing Page Dragon Ball"
+    loading="lazy"
+  />
+</div>
+
+
+          <h3>Landing Page Dragon Ball</h3>
+          <p class="project-meta">Landing visual • UI temática • Front-end</p>
+          <p class="project-text">
+            Landing page inspirada em Dragon Ball, explorando tipografia, cores e composição visual temática.
+            Foco em demonstrar domínio de front-end, animações sutis e construção de interfaces mais criativas.
+          </p>
+
+          <div class="project-links">
+            <a
+              class="btn primary magnetic"
+              href="https://fflucasff.github.io/Projeto---Dragon-Ball/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Acessar landing
+            </a>
+            <a
+              class="btn tertiary magnetic"
+              href="https://github.com/fflucasff/Projeto---Dragon-Ball"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Código-fonte
+            </a>
+          </div>
+        </article>
+
+        <!-- Projeto 5: Site Médica Laís Junqueira -->
+        <article class="project-card tilt" data-reveal>
+          <div class="project-media">
+  <img
+    src="assets/img/lais-junqueira-preview.png"
+    alt="Site institucional Dra. Laís Junqueira"
+    loading="lazy"
+  />
+</div>
+
+
+          <h3>Site para Médica – Dra. Laís Junqueira</h3>
+          <p class="project-meta">Site institucional • Profissional da saúde</p>
+          <p class="project-text">
+            Site institucional desenvolvido para médica dermatologista, com foco em posicionamento profissional,
+            clareza de serviços, agenda e imagem. Estrutura preparada para futura integração com conteúdos e
+            campanhas de atração de pacientes.
+          </p>
+
+          <div class="project-links">
+            <a
+              class="btn primary magnetic"
+              href="https://fflucasff.github.io/Site-Lais-Junqueira/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Acessar site
+            </a>
+            <a
+              class="btn tertiary magnetic"
+              href="https://github.com/fflucasff/Site-Lais-Junqueira"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Código-fonte
             </a>
           </div>
         </article>
@@ -270,103 +449,137 @@
     </div>
   </section>
 
+  <!-- SOBRE / FUNDADOR -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">Estrutura técnica por trás da LFF Industries</h2>
+      <p class="section-description">
+        A LFF Industries foi fundada por <strong>Lucas Figueiredo Fernandes</strong>,
+        engenheiro de computação em formação e desenvolvedor full-stack. O foco é
+        unir visão técnica e visão de performance em um único núcleo de decisão.
+      </p>
+
+      <div class="about-grid">
+        <div class="card tilt" data-reveal>
+          <h3>Base tecnológica</h3>
+          <ul class="skills-list">
+            <li>Front-end com React e TypeScript</li>
+            <li>Back-end em Python (FastAPI)</li>
+            <li>Banco de dados com PostgreSQL</li>
+            <li>HTML, CSS e JavaScript para landings enxutas</li>
+            <li>Versionamento com Git e GitHub</li>
+          </ul>
+        </div>
+
+        <div class="card tilt" data-reveal>
+          <h3>Atuação em performance</h3>
+          <ul class="skills-list">
+            <li>Estruturação de páginas para tráfego pago</li>
+            <li>Configuração de parâmetros UTM e eventos</li>
+            <li>Integrações com trackers e checkouts</li>
+            <li>Foco em legibilidade de dados e decisões de mídia</li>
+          </ul>
+        </div>
+
+        <div class="card tilt" data-reveal>
+          <h3>Forma de trabalho</h3>
+          <p>
+            Projetos conduzidos com escopo definido, cronograma claro e checkpoints.
+            Cada entrega é pensada para ser operada no dia a dia, sem complexidade
+            desnecessária para o cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTATO -->
-  <section id="contact" class="section">
+  <section id="contact" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Contato</h2>
+      <h2 class="section-title">Contato e próximos passos</h2>
       <p class="section-description">
-        Se você precisa de alguém para tirar do papel sites, páginas de venda
-        e integrações de tracking com foco em resultado, me chama e vamos
-        desenhar a solução ideal para o seu cenário.
+        Para avaliar um projeto com a LFF Industries, o primeiro passo é uma
+        conversa objetiva sobre modelo de negócio, prazos e prioridades.
       </p>
 
       <div class="contact-grid">
-        <!-- Contato direto -->
-        <div class="contact-card" data-reveal>
-          <h3>Fale direto comigo</h3>
+        <div class="contact-card tilt" data-reveal>
+          <h3>Informações de contato</h3>
           <p>
-            Você pode entrar em contato por e-mail ou ver mais detalhes
-            dos meus projetos no GitHub e LinkedIn.
+            Envie um resumo do cenário atual e do objetivo do projeto. A partir disso,
+            estruturamos uma proposta alinhada.
           </p>
           <ul class="contact-list">
+            <li><strong>Empresa:</strong> LFF Industries</li>
+            <li><strong>Fundador:</strong> Lucas Figueiredo Fernandes</li>
             <li>
               <strong>E-mail:</strong>
-              <a href="mailto:lff.industries@gmail.com">
-                lff.industries@gmail.com
+              <a href="mailto:lff.industries@gmail.com">lff.industries@gmail.com</a>
+            </li>
+            <li>
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/5535991796968" target="_blank" rel="noopener noreferrer">
+                (35) 99179-6968
               </a>
             </li>
             <li>
               <strong>GitHub:</strong>
-              <a
-                href="https://github.com/fflucasff"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/fflucasff" target="_blank" rel="noopener noreferrer">
                 github.com/fflucasff
               </a>
             </li>
             <li>
               <strong>LinkedIn:</strong>
-              <a
-                href="https://www.linkedin.com/in/lucasff-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.linkedin.com/in/lucasff-dev" target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/lucasff-dev
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- Formulário visual -->
-        <div class="contact-card" data-reveal>
-          <h3>Formulário básico (HTML)</h3>
-          <p>
-            Este formulário é apenas visual. Depois podemos integrar com um backend
-            ou ferramentas como Formspree para receber as mensagens.
-          </p>
-          <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" placeholder="Seu nome" />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="seu-email@exemplo.com"
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Mensagem</label>
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Conte rapidamente sobre a necessidade do projeto."
-              ></textarea>
-            </div>
-            <button type="button" class="btn primary btn-full">
-              Enviar (visual)
-            </button>
-          </form>
-        </div>
-      </div>
+        <div class="contact-card tilt" data-reveal>
+  <h3>Formulário de contato</h3>
+  <p>
+    Preencha os dados abaixo com um breve contexto. A equipe da LFF Industries
+    retorna com os próximos passos e uma proposta alinhada ao seu cenário.
+  </p>
+
+  <form class="contact-form" id="contact-form">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" id="name" placeholder="Nome completo" />
     </div>
-  </section>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="seu-email@empresa.com" />
+    </div>
+    <div class="form-group">
+      <label for="message">Contexto do projeto</label>
+      <textarea
+        id="message"
+        rows="4"
+        placeholder="Descreva brevemente o tipo de solução que deseja desenvolver."
+      ></textarea>
+    </div>
+    <button type="submit" class="btn primary btn-full magnetic">
+      Enviar mensagem
+    </button>
+  </form>
+</div>
+
 
   <!-- RODAPÉ -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> Lucas Figueiredo Fernandes. Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> LFF Industries. Todos os direitos reservados.</p>
       <p class="footer-small">
-        Feito com código limpo, performance e foco em resultado.
+        Engenharia digital orientada a performance.
       </p>
     </div>
   </footer>
 
-  <!-- JS principal -->
+  <!-- Anime.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
