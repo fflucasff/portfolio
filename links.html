@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links | Lucas FF</title>
+
+  <!-- Reusa o CSS principal do portfólio -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <meta
+    name="description"
+    content="Página de links de Lucas Figueiredo Fernandes — desenvolvedor web focado em sites, landing pages, sistemas e tracking."
+  />
+
+  <style>
+    /* Ajustes específicos para a página de links */
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #020617 0, #000 70%);
+    }
+
+    .link-bio-wrapper {
+      width: 100%;
+      max-width: 420px;
+      padding: 1.5rem;
+    }
+
+    .link-bio-card {
+      background-color: rgba(15, 23, 42, 0.95);
+      border-radius: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 1.75rem 1.5rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.9);
+    }
+
+    .link-bio-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      border: 2px solid rgba(148, 163, 184, 0.5);
+      margin: 0 auto 1rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 0 0, #6366f1 0, transparent 60%),
+        radial-gradient(circle at 100% 100%, #22c55e 0, transparent 60%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .link-bio-photo img {
+      width: 82%;
+      height: 82%;
+      border-radius: 999px;
+      object-fit: cover;
+    }
+
+    .link-bio-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f9fafb;
+      margin-bottom: 0.25rem;
+    }
+
+    .link-bio-tagline {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 1.5rem;
+    }
+
+    .link-bio-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .link-bio-links .btn-link {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background-color: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.96rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: background-color 0.2s ease, transform 0.15s ease,
+        box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .link-bio-links .btn-link.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, #6366f1, #22c55e);
+      color: #020617;
+      box-shadow: 0 16px 40px rgba(22, 163, 74, 0.45);
+    }
+
+    .link-bio-links .btn-link:hover {
+      transform: translateY(-1px);
+      border-color: #6366f1;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .link-bio-links .btn-link.primary:hover {
+      transform: translateY(-1px) scale(1.01);
+    }
+
+    .link-bio-footnote {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      .link-bio-wrapper {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="link-bio-wrapper">
+    <section class="link-bio-card" data-reveal>
+      <div class="link-bio-photo">
+        <img
+          src="assets/img/imagem_perfil.png"
+          alt="Foto de Lucas Figueiredo Fernandes"
+        />
+      </div>
+
+      <h1 class="link-bio-name">Lucas Figueiredo Fernandes</h1>
+      <p class="link-bio-tagline">
+        Desenvolvedor web full-stack • Landing pages, sistemas, tracking e integrações
+        para negócios que vivem de tráfego e conversão.
+      </p>
+
+      <div class="link-bio-links">
+        <!-- Link para o portfólio principal -->
+        <a
+          href="./"
+          class="btn-link primary"
+        >
+          Ver portfólio completo
+        </a>
+
+        <!-- WhatsApp (troque o número pelo seu real) -->
+        <a
+          href="https://wa.me/5535991796968?text=Ol%C3%A1%20Lucas%2C%20vi%20seus%20links%20e%20quero%20falar%20sobre%20um%20projeto."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-link"
+        >
+          Falar comigo no WhatsApp
+        </a>
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/fflucasff"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-link"
+        >
+          Ver meus projetos no GitHub
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/lucasff-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-link"
+        >
+          Conectar no LinkedIn
+        </a>
+      </div>
+
+      <p class="link-bio-footnote">
+        Se você precisa de páginas, sistemas ou estrutura de tracking mais séria,
+        meu portfólio mostra como posso ajudar.
+      </p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
