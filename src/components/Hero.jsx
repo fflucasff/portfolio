@@ -6,6 +6,22 @@ const WA_LINK =
 
 export default function Hero() {
   const canvasRef = useRef(null)
+  const sectionRef = useRef(null)
+  const spotlightRef = useRef(null)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    const spotlight = spotlightRef.current
+    if (!section || !spotlight) return
+    const handleMove = (e) => {
+      const rect = section.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      spotlight.style.background = `radial-gradient(500px circle at ${x}px ${y}px, rgba(212,175,55,0.12), transparent 60%)`
+    }
+    section.addEventListener('mousemove', handleMove)
+    return () => section.removeEventListener('mousemove', handleMove)
+  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -62,7 +78,10 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section ref={sectionRef} id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      {/* Cursor spotlight */}
+      <div ref={spotlightRef} className="absolute inset-0 pointer-events-none transition-opacity duration-300" />
+
       {/* Particle canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" style={{ opacity: 0.65 }} />
 

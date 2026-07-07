@@ -169,6 +169,22 @@
     opacity: 1;
   }
 
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(115deg, transparent, rgba(255,255,255,0.55), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
+  }
+
+  .btn-primary:hover::after {
+    left: 130%;
+  }
+
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 32px rgba(212, 175, 55, 0.5);

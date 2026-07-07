@@ -1,4 +1,4 @@
-import { ExternalLink, Code2 as GithubIcon, ArrowUpRight } from 'lucide-react'
+import { ExternalLink, Code2 as GithubIcon, ArrowUpRight, Bot, Monitor, Trophy, Heart } from 'lucide-react'
 import { useState } from 'react'
 
 const projects = [
@@ -19,36 +19,6 @@ const projects = [
     github: 'https://github.com/fflucasff/Site-Lais-Junqueira',
   },
   {
-    title: 'BR Advogados Associados',
-    tag: 'Landing Page Institucional',
-    tagColor: 'from-yellow-500 to-amber-800',
-    problem:
-      'Escritório especializado em direito previdenciário precisava transmitir credibilidade e captar leads qualificados sem parecer "mais um site de advogado genérico".',
-    solution:
-      'Landing institucional com copy clara sobre aposentadoria, revisão de benefícios e BPC/LOAS, prova de mais de 10 anos de atuação e atendimento direto (sem terceirização de caso), com CTA direto para WhatsApp.',
-    result: 'Página pronta para captar leads em todo o Brasil, com atuação registrada em SP e MG.',
-    tech: ['HTML/CSS', 'JavaScript', 'WhatsApp API'],
-    accentColor: 'rgba(240, 200, 105, 0.12)',
-    borderColor: 'rgba(240, 200, 105, 0.22)',
-    live: 'https://fflucasff.github.io/LP-BR-Advogados/',
-    github: 'https://github.com/fflucasff/LP-BR-Advogados',
-  },
-  {
-    title: 'ALPREVEMP – Saúde Ocupacional',
-    tag: 'Landing Page B2B',
-    tagColor: 'from-amber-500 to-yellow-800',
-    problem:
-      'Empresa de medicina do trabalho precisava explicar serviços técnicos e burocráticos (ASO, PCMSO, PGR, LTCAT) de forma simples para donos de empresas que não entendem a legislação trabalhista.',
-    solution:
-      'LP B2B com fluxo de 4 passos (contato → avaliação → execução → entrega), retorno em 24h e atendimento via WhatsApp, cobrindo múltiplos municípios do sul de Minas Gerais.',
-    result: 'Comunicação simplificada de um serviço técnico, reduzindo a fricção no primeiro contato comercial.',
-    tech: ['HTML/CSS', 'JavaScript', 'WhatsApp API'],
-    accentColor: 'rgba(138, 109, 31, 0.15)',
-    borderColor: 'rgba(138, 109, 31, 0.25)',
-    live: 'https://fflucasff.github.io/LP-ALPREVEMP/',
-    github: 'https://github.com/fflucasff/LP-ALPREVEMP',
-  },
-  {
     title: 'Donna – Secretária Virtual',
     tag: 'Sistema Personalizado / SaaS',
     tagColor: 'from-amber-400 to-yellow-700',
@@ -58,6 +28,7 @@ const projects = [
       'Plataforma própria com cadastro e autenticação de usuários, dashboard de rotina e arquitetura pronta para automações futuras (lembretes, integrações, IA).',
     result: 'Produto em fase de lançamento, já com fluxo de onboarding funcionando em produção.',
     tech: ['React', 'Autenticação', 'Deploy na Vercel'],
+    icon: Bot,
     accentColor: 'rgba(212, 175, 55, 0.12)',
     borderColor: 'rgba(212, 175, 55, 0.22)',
     live: 'https://donna-secretaria-virtual.vercel.app/register',
@@ -87,6 +58,7 @@ const projects = [
       'LP local com categorização por serviço (manutenção, montagem gamer, suporte, CFTV), múltiplos canais de contato (WhatsApp, Instagram, endereço físico) e CTAs diretos de orçamento.',
     result: 'Presença digital profissional para negócio de bairro, reforçando autoridade local frente à concorrência informal.',
     tech: ['HTML/CSS', 'JavaScript'],
+    icon: Monitor,
     accentColor: 'rgba(138, 109, 31, 0.15)',
     borderColor: 'rgba(138, 109, 31, 0.25)',
     live: 'https://fflucasff.github.io/LP-Universo-Computadores/',
@@ -102,6 +74,7 @@ const projects = [
       'Plataforma de bolão com palpites em tempo real (bloqueio automático antes da partida), ranking automático pós-jogo, grupos privados por convite e controle financeiro via Pix com aprovação do admin.',
     result: 'Sistema completo de gamificação esportiva com gestão financeira integrada, pronto para replicar para qualquer time ou grupo.',
     tech: ['React', 'Sistema de pontuação', 'Pix'],
+    icon: Trophy,
     accentColor: 'rgba(212, 175, 55, 0.12)',
     borderColor: 'rgba(212, 175, 55, 0.22)',
     live: 'https://fflucasff.github.io/LP-Bolao-tricolor',
@@ -117,6 +90,7 @@ const projects = [
       'App com sugestões de local baseadas no perfil do usuário, filtros por tipo de programa, ocasião, orçamento e distância, e um modo "swipe a dois" onde o casal vota junto até dar match no lugar do encontro.',
     result: 'Produto com potencial de monetização via assinatura premium, demonstrando domínio de UX para apps de consumo.',
     tech: ['React', 'Filtros dinâmicos', 'Lógica de matching'],
+    icon: Heart,
     accentColor: 'rgba(240, 200, 105, 0.12)',
     borderColor: 'rgba(240, 200, 105, 0.22)',
     live: 'https://fflucasff.github.io/OPDate/',
@@ -179,14 +153,19 @@ function ProjectCard({ project }) {
   return (
     <div
       className="reveal glass rounded-2xl overflow-hidden group cursor-default"
-      style={{ border: `1px solid ${project.borderColor}`, transition: 'all 0.4s ease' }}
+      style={{ border: `1px solid ${project.borderColor}`, transition: 'transform 0.15s ease, box-shadow 0.4s ease', transformStyle: 'preserve-3d' }}
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = `0 24px 60px ${project.accentColor}`
-        e.currentTarget.style.transform = 'translateY(-4px)'
+      }}
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect()
+        const px = (e.clientX - rect.left) / rect.width - 0.5
+        const py = (e.clientY - rect.top) / rect.height - 0.5
+        e.currentTarget.style.transform = `perspective(800px) rotateX(${(-py * 6).toFixed(2)}deg) rotateY(${(px * 6).toFixed(2)}deg) translateY(-4px)`
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = 'none'
-        e.currentTarget.style.transform = 'translateY(0)'
+        e.currentTarget.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0)'
       }}
     >
       {/* Project image */}
@@ -206,11 +185,19 @@ function ProjectCard({ project }) {
           </span>
         </div>
       ) : (
-        <div className="w-full h-48 md:h-52 bg-slate-900 flex flex-col items-center justify-center gap-3 relative">
-          <span className={`text-xs font-mono font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-gradient-to-r ${project.tagColor} text-white shadow-lg`}>
+        <div className="w-full h-48 md:h-52 relative overflow-hidden"
+          style={{ background: `linear-gradient(160deg, ${project.accentColor} 0%, #0a1628 75%)` }}>
+          {/* Dot grid texture */}
+          <div className="absolute inset-0 opacity-40"
+            style={{ backgroundImage: 'radial-gradient(rgba(212,175,55,0.35) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+          {/* Decorative icon */}
+          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+            {project.icon && <project.icon size={72} strokeWidth={1} className="text-amber-400/25" />}
+          </div>
+          {/* Tag badge */}
+          <span className={`absolute top-3 left-3 text-xs font-mono font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-gradient-to-r ${project.tagColor} text-[#0a1628] shadow-lg`}>
             {project.tag}
           </span>
-          <span className="text-slate-600 text-xs font-mono">preview indisponível</span>
         </div>
       )}
 

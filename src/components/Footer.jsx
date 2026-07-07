@@ -64,12 +64,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="mt-10 pt-6 border-t border-white/5 flex items-center justify-center">
           <p className="text-xs text-slate-700 font-mono">
             © {new Date().getFullYear()} LFF Industries · Lucas Figueiredo Fernandes
-          </p>
-          <p className="text-xs text-slate-700 font-mono">
-            Desenvolvido com React + Tailwind CSS
           </p>
         </div>
       </div>
