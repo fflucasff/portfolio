@@ -1,25 +1,25 @@
 import { ArrowRight, MessageCircle, Mail } from 'lucide-react'
 
 const WA_LINK =
-  'https://wa.me/5535991796968?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
+  'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
 
 export default function CTA() {
   return (
     <section id="contact" className="relative py-28 overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 70%)' }} />
+        style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%)' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(139,92,246,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+        style={{ background: 'radial-gradient(ellipse, rgba(138,109,31,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }} />
 
       {/* Top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6 text-center relative">
         <div className="reveal">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full text-xs font-mono font-medium tracking-widest uppercase"
-            style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', color: '#a78bfa' }}>
+            style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.25)', color: '#f0c869' }}>
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Disponível para novos projetos
           </div>

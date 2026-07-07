@@ -6,32 +6,32 @@ const stats = [
     value: '30+',
     label: 'Projetos digitais',
     desc: 'Sites, sistemas e funis entregues com qualidade',
-    color: 'from-indigo-500 to-purple-600',
-    glow: 'rgba(99, 102, 241, 0.2)',
+    color: 'from-amber-400 to-yellow-700',
+    glow: 'rgba(212, 175, 55, 0.2)',
   },
   {
     icon: TrendingUp,
     value: '3x',
     label: 'Mais conversões',
     desc: 'Média de melhoria em landing pages otimizadas',
-    color: 'from-purple-500 to-cyan-500',
-    glow: 'rgba(139, 92, 246, 0.2)',
+    color: 'from-yellow-500 to-amber-700',
+    glow: 'rgba(240, 200, 105, 0.2)',
   },
   {
     icon: Target,
     value: '100%',
     label: 'Rastreamento preciso',
     desc: 'Implementações de tracking sem perda de dados',
-    color: 'from-cyan-500 to-blue-600',
-    glow: 'rgba(6, 182, 212, 0.2)',
+    color: 'from-amber-500 to-yellow-800',
+    glow: 'rgba(138, 109, 31, 0.2)',
   },
   {
     icon: Users,
     value: '15+',
     label: 'Clientes atendidos',
     desc: 'Em e-commerce, serviços e infoprodutos',
-    color: 'from-violet-500 to-indigo-600',
-    glow: 'rgba(167, 139, 250, 0.2)',
+    color: 'from-yellow-400 to-amber-600',
+    glow: 'rgba(245, 215, 142, 0.2)',
   },
 ]
 
@@ -44,7 +44,7 @@ const logos = [
 export default function SocialProof() {
   return (
     <section id="proof" className="relative py-24 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-indigo-500/30" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-amber-500/30" />
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Label */}
@@ -84,7 +84,7 @@ export default function SocialProof() {
             <div className="flex gap-6 items-center" style={{ animation: 'scroll-x 22s linear infinite', width: 'max-content' }}>
               {[...logos, ...logos].map((logo, i) => (
                 <span key={i}
-                  className="text-slate-500 text-sm font-medium whitespace-nowrap px-4 py-2 rounded-lg border border-white/5 hover:border-indigo-500/30 hover:text-slate-300 transition-colors cursor-default">
+                  className="text-slate-500 text-sm font-medium whitespace-nowrap px-4 py-2 rounded-lg border border-white/5 hover:border-amber-500/30 hover:text-slate-300 transition-colors cursor-default">
                   {logo}
                 </span>
               ))}

@@ -1,7 +1,7 @@
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 const WA_LINK =
-  'https://wa.me/5535991796968?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
+  'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
 
 const traits = [
   {
@@ -34,7 +34,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-24">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none opacity-[0.05]"
-        style={{ background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)', filter: 'blur(80px)' }} />
+        style={{ background: 'radial-gradient(circle, #d4af37 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -63,7 +63,7 @@ export default function About() {
               {traits.map((trait, i) => (
                 <div key={trait.title} className="reveal flex gap-4"
                   style={{ transitionDelay: `${i * 0.1}s` }}>
-                  <CheckCircle2 size={18} className="text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{trait.title}</div>
                     <div className="text-sm text-slate-500 leading-relaxed">{trait.desc}</div>
@@ -96,14 +96,14 @@ export default function About() {
                     e.target.nextSibling.style.display = 'flex'
                   }}
                 />
-                <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 items-center justify-center text-white font-black text-2xl hidden">
+                <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-amber-400 to-yellow-700 items-center justify-center text-[#0a1628] font-black text-2xl hidden">
                   L
                 </div>
-                <span className="absolute -bottom-1.5 -right-1.5 w-5 h-5 bg-emerald-400 rounded-full border-2 border-[#0f172a]" />
+                <span className="absolute -bottom-1.5 -right-1.5 w-5 h-5 bg-emerald-400 rounded-full border-2 border-[#0a1628]" />
               </div>
               <div>
                 <div className="text-base font-bold text-white">Lucas Figueiredo Fernandes</div>
-                <div className="text-sm text-indigo-400 font-mono mb-1">LFF Industries</div>
+                <div className="text-sm text-amber-400 font-mono mb-1">LFF Industries</div>
                 <div className="text-xs text-slate-500">Full-Stack Dev · Growth Engineer</div>
                 <div className="flex gap-3 mt-2">
                   <a href="mailto:lff.industries@gmail.com" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
@@ -124,7 +124,7 @@ export default function About() {
                     <div className="flex flex-col items-center">
                       <div className={`w-2.5 h-2.5 rounded-full flex-shrink-0 mt-0.5 transition-all duration-300 ${
                         item.active
-                          ? 'bg-indigo-400 shadow-lg shadow-indigo-500/50 ring-4 ring-indigo-500/20'
+                          ? 'bg-amber-400 shadow-lg shadow-amber-500/50 ring-4 ring-amber-500/20'
                           : 'bg-slate-700 group-hover:bg-slate-500'
                       }`} />
                       {i < timeline.length - 1 && (
@@ -132,7 +132,7 @@ export default function About() {
                       )}
                     </div>
                     <div className="pb-6">
-                      <span className={`text-xs font-mono font-bold tracking-wider ${item.active ? 'text-indigo-400' : 'text-slate-600'}`}>
+                      <span className={`text-xs font-mono font-bold tracking-wider ${item.active ? 'text-amber-400' : 'text-slate-600'}`}>
                         {item.year}
                       </span>
                       <p className={`text-sm mt-0.5 leading-relaxed ${item.active ? 'text-slate-200 font-medium' : 'text-slate-500'}`}>

@@ -32,14 +32,14 @@
   }
 
   body {
-    background-color: #030712;
+    background-color: #050b18;
     color: #e2e8f0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: rgba(99, 102, 241, 0.35);
+    background: rgba(212, 175, 55, 0.35);
     color: #fff;
   }
 
@@ -48,36 +48,36 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #030712;
+    background: #050b18;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(99, 102, 241, 0.5);
+    background: rgba(212, 175, 55, 0.5);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(99, 102, 241, 0.8);
+    background: rgba(212, 175, 55, 0.8);
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+    background: linear-gradient(135deg, #f0d386 0%, #d4af37 50%, #9c7a29 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-warm {
-    background: linear-gradient(135deg, #a78bfa 0%, #818cf8 50%, #38bdf8 100%);
+    background: linear-gradient(135deg, #f5d78e 0%, #e0b84f 50%, #c9971f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(8, 18, 38, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(148, 163, 184, 0.08);
@@ -88,15 +88,15 @@
   }
 
   .glass-hover:hover {
-    background: rgba(30, 41, 59, 0.7);
-    border-color: rgba(99, 102, 241, 0.3);
+    background: rgba(16, 32, 58, 0.7);
+    border-color: rgba(212, 175, 55, 0.3);
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
   }
 
   .glow-border {
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.1), inset 0 0 20px rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1), inset 0 0 20px rgba(212, 175, 55, 0.05);
   }
 
   .noise-bg {
@@ -148,10 +148,10 @@
 
   .btn-primary {
     @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: #fff;
+    background: linear-gradient(135deg, #f0c869, #d4af37);
+    color: #0a1628;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.35);
+    box-shadow: 0 4px 24px rgba(212, 175, 55, 0.35);
     position: relative;
     overflow: hidden;
   }
@@ -160,7 +160,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    background: linear-gradient(135deg, #d4af37, #8a6d1f);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -171,7 +171,7 @@
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.5);
   }
 
   .btn-primary span {
@@ -188,15 +188,15 @@
   }
 
   .btn-secondary:hover {
-    border-color: rgba(99, 102, 241, 0.5);
-    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: rgba(212, 175, 55, 0.08);
     transform: translateY(-2px);
     color: #fff;
   }
 
   .section-label {
     @apply inline-flex items-center gap-2 text-xs font-mono font-medium tracking-widest uppercase;
-    color: #6366f1;
+    color: #d4af37;
     letter-spacing: 0.15em;
   }
 
@@ -205,6 +205,6 @@
     display: inline-block;
     width: 20px;
     height: 1px;
-    background: #6366f1;
+    background: #d4af37;
   }
 }

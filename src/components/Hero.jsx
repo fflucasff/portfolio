@@ -2,7 +2,7 @@ import { ArrowRight, ChevronDown, MessageCircle } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 
 const WA_LINK =
-  'https://wa.me/5535991796968?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
+  'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
 
 export default function Hero() {
   const canvasRef = useRef(null)
@@ -30,7 +30,7 @@ export default function Hero() {
         this.speedX = (Math.random() - 0.5) * 0.35
         this.speedY = (Math.random() - 0.5) * 0.35
         this.opacity = Math.random() * 0.45 + 0.08
-        this.hue = Math.random() > 0.5 ? 240 : 270
+        this.hue = Math.random() > 0.5 ? 42 : 48
       }
       update() {
         this.x += this.speedX
@@ -41,7 +41,7 @@ export default function Hero() {
       draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fillStyle = `hsla(${this.hue}, 80%, 65%, ${this.opacity})`
+        ctx.fillStyle = `hsla(${this.hue}, 70%, 60%, ${this.opacity})`
         ctx.fill()
       }
     }
@@ -69,23 +69,23 @@ export default function Hero() {
       {/* Background orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute w-[700px] h-[700px] rounded-full opacity-[0.11]"
-          style={{ top: '-15%', left: '-10%', background: 'radial-gradient(circle, #6366f1 0%, transparent 70%)', filter: 'blur(70px)', animation: 'float 10s ease-in-out infinite' }} />
+          style={{ top: '-15%', left: '-10%', background: 'radial-gradient(circle, #d4af37 0%, transparent 70%)', filter: 'blur(70px)', animation: 'float 10s ease-in-out infinite' }} />
         <div className="absolute w-[500px] h-[500px] rounded-full opacity-[0.09]"
-          style={{ bottom: '-10%', right: '-5%', background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)', filter: 'blur(70px)', animation: 'float 14s ease-in-out infinite reverse' }} />
+          style={{ bottom: '-10%', right: '-5%', background: 'radial-gradient(circle, #8a6d1f 0%, transparent 70%)', filter: 'blur(70px)', animation: 'float 14s ease-in-out infinite reverse' }} />
         <div className="absolute w-[350px] h-[350px] rounded-full opacity-[0.06]"
-          style={{ top: '45%', left: '55%', background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)', filter: 'blur(60px)' }} />
+          style={{ top: '45%', left: '55%', background: 'radial-gradient(circle, #f0c869 0%, transparent 70%)', filter: 'blur(60px)' }} />
       </div>
 
       {/* Grid overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
-        style={{ backgroundImage: `linear-gradient(rgba(99,102,241,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.6) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+        style={{ backgroundImage: `linear-gradient(rgba(212,175,55,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.6) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full text-xs font-mono font-medium tracking-widest uppercase"
-          style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', color: '#a78bfa', animation: 'fade-in 0.6s ease forwards' }}>
+          style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.25)', color: '#f0c869', animation: 'fade-in 0.6s ease forwards' }}>
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           Disponível para novos projetos
         </div>

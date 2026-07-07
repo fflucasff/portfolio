@@ -1,7 +1,7 @@
 import { Code2, ExternalLink, MessageCircle, Mail } from 'lucide-react'
 
 const WA_LINK =
-  'https://wa.me/5535991796968?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
+  'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/fflucasff', icon: Code2 },
@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <a href="#hero" className="flex items-center gap-2.5 mb-3">
-              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-indigo-500/20">
+              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-700 flex items-center justify-center text-[#0a1628] font-black text-sm shadow-lg shadow-amber-500/20">
                 L
               </span>
               <span className="font-bold text-white tracking-tight">
@@ -55,7 +55,7 @@ export default function Footer() {
               return (
                 <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/8 text-slate-500 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-all duration-200">
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/8 text-slate-500 hover:text-white hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-200">
                   <Icon size={15} />
                 </a>
               )

@@ -1,7 +1,7 @@
 const categories = [
   {
     label: 'Frontend',
-    color: 'text-indigo-400',
+    color: 'text-amber-400',
     techs: [
       { name: 'React', icon: '⚛️' },
       { name: 'TypeScript', icon: 'TS' },
@@ -12,7 +12,7 @@ const categories = [
   },
   {
     label: 'Backend & Dados',
-    color: 'text-purple-400',
+    color: 'text-yellow-500',
     techs: [
       { name: 'Node.js', icon: '🟢' },
       { name: 'Python (FastAPI)', icon: '🐍' },
@@ -23,7 +23,7 @@ const categories = [
   },
   {
     label: 'Tracking & Marketing',
-    color: 'text-cyan-400',
+    color: 'text-amber-300',
     techs: [
       { name: 'Google Tag Manager', icon: '🏷️' },
       { name: 'Meta Pixel', icon: '📊' },
@@ -34,7 +34,7 @@ const categories = [
   },
   {
     label: 'Ferramentas',
-    color: 'text-violet-400',
+    color: 'text-yellow-600',
     techs: [
       { name: 'Git / GitHub', icon: '🐙' },
       { name: 'Vite', icon: '⚡' },
@@ -48,7 +48,7 @@ const categories = [
 export default function TechStack() {
   return (
     <section id="stack" className="relative py-24">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
@@ -72,7 +72,7 @@ export default function TechStack() {
                 {cat.techs.map((tech) => (
                   <div key={tech.name} className="flex items-center gap-3 group cursor-default">
                     <span className="w-8 h-8 rounded-lg flex items-center justify-center text-sm flex-shrink-0 transition-all duration-200 group-hover:scale-110"
-                      style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.12)' }}>
+                      style={{ background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.12)' }}>
                       {tech.icon}
                     </span>
                     <span className="text-sm text-slate-400 group-hover:text-slate-200 transition-colors font-medium">
@@ -102,11 +102,11 @@ export default function TechStack() {
               <div key={item.skill}>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm text-slate-300 font-medium">{item.skill}</span>
-                  <span className="text-xs font-mono text-indigo-400">{item.level}%</span>
+                  <span className="text-xs font-mono text-amber-400">{item.level}%</span>
                 </div>
                 <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden">
                   <div className="h-full rounded-full"
-                    style={{ width: `${item.level}%`, background: 'linear-gradient(90deg, #6366f1, #8b5cf6)', animation: `progress-grow 1.2s ease ${i * 0.1 + 0.5}s both` }} />
+                    style={{ width: `${item.level}%`, background: 'linear-gradient(90deg, #8a6d1f, #d4af37)', animation: `progress-grow 1.2s ease ${i * 0.1 + 0.5}s both` }} />
                 </div>
               </div>
             ))}

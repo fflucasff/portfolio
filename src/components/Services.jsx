@@ -1,7 +1,7 @@
 import { Layout, BarChart3, GitBranch, Globe, ArrowRight } from 'lucide-react'
 
 const WA_LINK =
-  'https://wa.me/5535991796968?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
+  'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
 
 const services = [
   {
@@ -11,8 +11,8 @@ const services = [
     description:
       'Páginas construídas para vender — não apenas para impressionar. Combino psicologia de UX, estrutura de copy persuasiva e otimização contínua para transformar visitantes em clientes.',
     outcomes: ['Até 3x mais conversões', 'Mobile-first e carregamento rápido', 'Integração com CRM e pixels'],
-    color: 'from-indigo-500 to-purple-600',
-    glow: 'rgba(99, 102, 241, 0.15)',
+    color: 'from-amber-400 to-yellow-700',
+    glow: 'rgba(212, 175, 55, 0.15)',
   },
   {
     icon: BarChart3,
@@ -21,8 +21,8 @@ const services = [
     description:
       'Stack completo de atribuição: Facebook Pixel, Google Tag Manager, UTM, integração com RedTrack — para você saber exatamente de onde vem cada real investido.',
     outcomes: ['Zero perda de dados', 'Atribuição full-funnel', 'Eventos e conversões customizadas'],
-    color: 'from-cyan-500 to-blue-600',
-    glow: 'rgba(6, 182, 212, 0.15)',
+    color: 'from-yellow-500 to-amber-800',
+    glow: 'rgba(240, 200, 105, 0.15)',
   },
   {
     icon: GitBranch,
@@ -31,8 +31,8 @@ const services = [
     description:
       'Funis do início ao fim: VSLs, upsells, sequências pós-compra e automações. Projetados para maximizar o faturamento de cada lead que entra no seu ecossistema.',
     outcomes: ['Fluxos de conversão em múltiplas etapas', 'Automação de e-mails e WhatsApp', 'UX otimizado para receita'],
-    color: 'from-violet-500 to-purple-700',
-    glow: 'rgba(139, 92, 246, 0.15)',
+    color: 'from-amber-500 to-yellow-800',
+    glow: 'rgba(138, 109, 31, 0.2)',
   },
   {
     icon: Globe,
@@ -41,8 +41,8 @@ const services = [
     description:
       'De sites de autoridade a aplicações web completas — entrego código limpo, arquitetura escalável e performance de produção com React, Node.js e integrações de API.',
     outcomes: ['Stack React + Node.js', 'Integrações de API', 'Arquitetura escalável'],
-    color: 'from-purple-500 to-indigo-700',
-    glow: 'rgba(167, 139, 250, 0.15)',
+    color: 'from-amber-400 to-yellow-700',
+    glow: 'rgba(245, 215, 142, 0.15)',
   },
 ]
 
@@ -50,7 +50,7 @@ export default function Services() {
   return (
     <section id="services" className="relative py-24">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] pointer-events-none opacity-[0.04]"
-        style={{ background: 'radial-gradient(ellipse, #6366f1 0%, transparent 70%)', filter: 'blur(80px)' }} />
+        style={{ background: 'radial-gradient(ellipse, #d4af37 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Header */}
@@ -79,7 +79,7 @@ export default function Services() {
                     <Icon size={22} className="text-white" />
                   </div>
                   <span className="text-xs font-mono font-medium tracking-wider uppercase px-3 py-1 rounded-full"
-                    style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', color: '#a78bfa' }}>
+                    style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.2)', color: '#f0c869' }}>
                     {service.tag}
                   </span>
                 </div>
@@ -89,12 +89,12 @@ export default function Services() {
                   {service.outcomes.map((outcome) => (
                     <li key={outcome} className="flex items-center gap-2.5 text-sm text-slate-300">
                       <span className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                        style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)' }} />
+                        style={{ background: 'linear-gradient(135deg, #d4af37, #8a6d1f)' }} />
                       {outcome}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex items-center gap-1.5 text-sm text-indigo-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mt-6 flex items-center gap-1.5 text-sm text-amber-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span>Saiba mais</span>
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>

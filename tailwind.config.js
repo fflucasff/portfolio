@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#030712',
-        surface: '#0f172a',
-        'surface-2': '#1e293b',
-        accent: '#6366f1',
-        'accent-2': '#8b5cf6',
-        'accent-3': '#06b6d4',
-        neon: '#a78bfa',
+        background: '#050b18',
+        surface: '#0a1628',
+        'surface-2': '#122540',
+        accent: '#d4af37',
+        'accent-2': '#f0c869',
+        'accent-3': '#8a6d1f',
+        neon: '#f5d78e',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -51,8 +51,8 @@ export default {
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         'glow': {
-          '0%': { 'box-shadow': '0 0 20px rgba(99, 102, 241, 0.3)' },
-          '100%': { 'box-shadow': '0 0 40px rgba(99, 102, 241, 0.8), 0 0 80px rgba(139, 92, 246, 0.3)' },
+          '0%': { 'box-shadow': '0 0 20px rgba(212, 175, 55, 0.3)' },
+          '100%': { 'box-shadow': '0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(138, 109, 31, 0.3)' },
         },
       },
       backgroundImage: {
