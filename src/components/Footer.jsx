@@ -1,4 +1,5 @@
 import { Code2, ExternalLink, MessageCircle, Mail } from 'lucide-react'
+import Logo from './Logo'
 
 const WA_LINK =
   'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
@@ -25,15 +26,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           {/* Brand */}
           <div>
-            <a href="#hero" className="flex items-center gap-2.5 mb-3">
-              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-700 flex items-center justify-center text-[#0a1628] font-black text-sm shadow-lg shadow-amber-500/20">
-                L
-              </span>
+            <a href="#hero" className="flex items-center gap-2.5 mb-3 justify-center md:justify-start">
+              <Logo size={32} className="flex-shrink-0" />
               <span className="font-bold text-white tracking-tight">
                 LFF<span className="text-gradient"> Industries</span>
               </span>
             </a>
-            <p className="text-xs text-slate-600 max-w-[220px] leading-relaxed">
+            <p className="text-xs text-slate-600 max-w-[220px] leading-relaxed text-center md:text-left">
               Sistemas digitais de alto desempenho para empresas que levam crescimento a sério.
             </p>
           </div>

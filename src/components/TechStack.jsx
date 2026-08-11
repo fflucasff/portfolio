@@ -47,12 +47,12 @@ const categories = [
 
 export default function TechStack() {
   return (
-    <section id="stack" className="relative py-24">
+    <section id="stack" className="relative py-16 sm:py-24">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-10 sm:mb-16 reveal">
           <span className="section-label mb-4">Tecnologias</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">
             As ferramentas por trás de{' '}
@@ -86,7 +86,7 @@ export default function TechStack() {
         </div>
 
         {/* Proficiency bars */}
-        <div className="glass rounded-2xl p-7 reveal">
+        <div className="glass rounded-2xl p-5 sm:p-7 reveal">
           <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-500 mb-6">
             Nível de proficiência
           </h3>

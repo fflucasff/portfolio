@@ -78,7 +78,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section ref={sectionRef} id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-28 sm:py-24">
       {/* Cursor spotlight */}
       <div ref={spotlightRef} className="absolute inset-0 pointer-events-none transition-opacity duration-300" />
 
@@ -100,17 +100,17 @@ export default function Hero() {
         style={{ backgroundImage: `linear-gradient(rgba(212,175,55,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.6) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full text-xs font-mono font-medium tracking-widest uppercase"
+        <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-mono font-medium tracking-widest uppercase"
           style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.25)', color: '#f0c869', animation: 'fade-in 0.6s ease forwards' }}>
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
           Disponível para novos projetos
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.06] tracking-tight mb-6"
+        <h1 className="text-[2.1rem] xs:text-5xl sm:text-6xl md:text-7xl font-black leading-[1.08] sm:leading-[1.06] tracking-tight mb-5 sm:mb-6"
           style={{ animation: 'fade-up 0.7s ease 0.1s both' }}>
           Sistemas digitais que{' '}
           <br className="hidden sm:block" />
@@ -118,7 +118,7 @@ export default function Hero() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10"
+        <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10"
           style={{ animation: 'fade-up 0.7s ease 0.25s both' }}>
           Desenvolvedor especializado em{' '}
           <span className="text-slate-200 font-medium">landing pages de alta conversão</span>,{' '}
@@ -145,23 +145,23 @@ export default function Hero() {
         </div>
 
         {/* Metrics */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-14"
+        <div className="mt-12 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-8 md:gap-14 max-w-2xl mx-auto"
           style={{ animation: 'fade-up 0.7s ease 0.55s both' }}>
           {[
-            { value: '30+', label: 'Projetos entregues' },
+            { value: '+100', label: 'Projetos entregues' },
             { value: '100%', label: 'Satisfação dos clientes' },
-            { value: '3x', label: 'Aumento médio em conversões' },
+            { value: '3x', label: 'Aumento em conversões' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-black text-gradient-warm">{stat.value}</div>
-              <div className="text-xs text-slate-500 mt-1 tracking-wide uppercase font-mono">{stat.label}</div>
+              <div className="text-2xl sm:text-3xl font-black text-gradient-warm">{stat.value}</div>
+              <div className="text-[10px] sm:text-xs text-slate-500 mt-1 tracking-wide uppercase font-mono leading-snug">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <a href="#proof" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 hover:text-slate-400 transition-colors"
+      <a href="#proof" className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-slate-600 hover:text-slate-400 transition-colors"
         style={{ animation: 'fade-in 1s ease 1s both' }}>
         <span className="text-xs font-mono tracking-widest uppercase">Role para baixo</span>
         <ChevronDown size={16} className="animate-bounce" />

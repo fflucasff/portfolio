@@ -6,7 +6,7 @@ const WA_LINK =
 const traits = [
   {
     title: 'Mentalidade de negócios',
-    desc: 'Não escrevo código por escrever — resolvo problemas de negócio. Cada decisão técnica mapeia para um resultado mensurável.',
+    desc: 'Não escrevo código por escrever. Resolvo problemas de negócio, e cada decisão técnica mapeia para um resultado mensurável.',
   },
   {
     title: 'Visão full-funnel',
@@ -18,13 +18,13 @@ const traits = [
   },
   {
     title: 'Comunicação clara',
-    desc: 'Os clientes sempre sabem o andamento do projeto. Sem surpresas, sem enrolação — entrega consistente e profissional.',
+    desc: 'Os clientes sempre sabem o andamento do projeto. Sem surpresas, sem enrolação, com entrega consistente e profissional.',
   },
 ]
 
 const timeline = [
-  { year: '2021', event: 'Início no desenvolvimento web — HTML, CSS e JavaScript' },
-  { year: '2022', event: 'Primeiros projetos para clientes — sites e landing pages' },
+  { year: '2021', event: 'Início no desenvolvimento web com HTML, CSS e JavaScript' },
+  { year: '2022', event: 'Primeiros projetos para clientes: sites e landing pages' },
   { year: '2023', event: 'Expansão para tracking, funis digitais e React' },
   { year: '2024', event: 'Projetos com empresas focadas em performance digital' },
   { year: 'Hoje', event: 'Construindo sistemas digitais de alto impacto para negócios sérios', active: true },
@@ -32,13 +32,13 @@ const timeline = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24">
+    <section id="about" className="relative py-16 sm:py-24 overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none opacity-[0.05]"
         style={{ background: 'radial-gradient(circle, #d4af37 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left — positioning */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          {/* Left: positioning */}
           <div>
             <div className="reveal">
               <span className="section-label mb-4">Sobre Mim</span>
@@ -48,12 +48,12 @@ export default function About() {
               </h2>
               <p className="text-slate-400 leading-relaxed mb-5">
                 Sou <span className="text-white font-medium">Lucas Figueiredo Fernandes</span>, desenvolvedor
-                full-stack por trás da <span className="text-white font-medium">LFF Industries</span> — focado em
+                full-stack por trás da <span className="text-white font-medium">LFF Industries</span>, focado em
                 construir sistemas digitais que ajudam empresas a vender mais, crescer e se estruturar no ambiente online.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
                 Minha bagagem une engenharia de software com inteligência de marketing digital.
-                Entendo stacks de tracking, funis de anúncios e estratégia de CRO — não só como empurrar código.
+                Entendo stacks de tracking, funis de anúncios e estratégia de CRO, não só como empurrar código.
                 Isso me torna valioso para empresas que querem um desenvolvedor que pensa como parceiro de crescimento.
               </p>
             </div>
@@ -82,10 +82,10 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right — profile + timeline */}
+          {/* Right: profile + timeline */}
           <div className="reveal-right space-y-6">
             {/* Profile card */}
-            <div className="glass rounded-2xl p-6 flex items-center gap-5">
+            <div className="glass rounded-2xl p-6 flex flex-col xs:flex-row items-center xs:items-start text-center xs:text-left gap-4 xs:gap-5">
               <div className="relative flex-shrink-0">
                 <img
                   src="/img/imagem_perfil.png"
@@ -105,8 +105,8 @@ export default function About() {
                 <div className="text-base font-bold text-white">Lucas Figueiredo Fernandes</div>
                 <div className="text-sm text-amber-400 font-mono mb-1">LFF Industries</div>
                 <div className="text-xs text-slate-500">Full-Stack Dev · Growth Engineer</div>
-                <div className="flex gap-3 mt-2">
-                  <a href="mailto:lff.industries@gmail.com" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+                <div className="flex gap-3 mt-2 justify-center xs:justify-start">
+                  <a href="mailto:lff.industries@gmail.com" className="text-xs text-slate-500 hover:text-slate-300 transition-colors break-all">
                     lff.industries@gmail.com
                   </a>
                 </div>
@@ -114,7 +114,7 @@ export default function About() {
             </div>
 
             {/* Timeline */}
-            <div className="glass rounded-2xl p-7">
+            <div className="glass rounded-2xl p-5 sm:p-7">
               <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-500 mb-7">
                 Trajetória
               </h3>

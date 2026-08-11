@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Logo from './Logo'
 
 const WA_LINK =
   'https://wa.me/5535991623621?text=Fala%20Lucas%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.'
@@ -32,10 +33,8 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2.5 group">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-700 flex items-center justify-center text-[#0a1628] font-black text-sm shadow-lg shadow-amber-500/30 group-hover:shadow-amber-500/50 transition-all duration-300">
-            L
-          </span>
-          <span className="font-bold text-white tracking-tight">
+          <Logo size={34} className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0" />
+          <span className="font-bold text-white tracking-tight text-sm sm:text-base">
             LFF<span className="text-gradient"> Industries</span>
           </span>
         </a>
@@ -70,40 +69,39 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors text-slate-300"
-          aria-label="Abrir menu"
+          aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          mobileOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="glass border-t border-white/5 px-6 py-4 flex flex-col gap-2">
-          {links.map((link) => (
+      {mobileOpen && (
+        <div className="md:hidden" style={{ animation: 'fade-in 0.2s ease both' }}>
+          <div className="glass border-t border-white/5 px-6 py-4 flex flex-col gap-2">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="py-3 px-4 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
-              key={link.href}
-              href={link.href}
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="py-2.5 px-4 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+              className="mt-2 btn-primary justify-center"
             >
-              {link.label}
+              <span>Falar no WhatsApp</span>
             </a>
-          ))}
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileOpen(false)}
-            className="mt-2 btn-primary justify-center"
-          >
-            <span>Falar no WhatsApp</span>
-          </a>
+          </div>
         </div>
-      </div>
+      )}
     </header>
   )
 }

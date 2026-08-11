@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global keyframes — used via inline style, so must live outside Tailwind layers */
+/* Global keyframes: used via inline style, so must live outside Tailwind layers */
 @keyframes fade-up {
   0%   { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }

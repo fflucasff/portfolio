@@ -3,7 +3,7 @@ import { TrendingUp, Globe, Target, Users } from 'lucide-react'
 const stats = [
   {
     icon: Globe,
-    value: '30+',
+    value: '+100',
     label: 'Projetos digitais',
     desc: 'Sites, sistemas e funis entregues com qualidade',
     color: 'from-amber-400 to-yellow-700',
@@ -43,12 +43,12 @@ const logos = [
 
 export default function SocialProof() {
   return (
-    <section id="proof" className="relative py-24 overflow-hidden">
+    <section id="proof" className="relative py-16 sm:py-24 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-amber-500/30" />
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Label */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-10 sm:mb-16 reveal">
           <span className="section-label mb-4">Resultados</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">
             Empresas que crescem com{' '}

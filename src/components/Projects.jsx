@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const projects = [
   {
-    title: 'Site Médica – Dra. Laís Junqueira',
+    title: 'Site Médico: Dra. Laís Junqueira',
     tag: 'Landing Page Profissional',
     tagColor: 'from-amber-400 to-yellow-700',
     problem:
@@ -19,7 +19,7 @@ const projects = [
     github: 'https://github.com/fflucasff/Site-Lais-Junqueira',
   },
   {
-    title: 'Donna – Secretária Virtual',
+    title: 'Donna: Secretária Virtual',
     tag: 'Sistema Personalizado / SaaS',
     tagColor: 'from-amber-400 to-yellow-700',
     problem:
@@ -34,7 +34,7 @@ const projects = [
     live: 'https://donna-secretaria-virtual.vercel.app/register',
   },
   {
-    title: 'Amor em Códigos – Paulo Victor & Carla',
+    title: 'Amor em Códigos: Paulo Victor & Carla',
     tag: 'Landing Page Personalizada',
     tagColor: 'from-yellow-500 to-amber-800',
     problem:
@@ -103,7 +103,7 @@ const projects = [
     problem:
       'Usuários precisavam de uma forma simples e visual de controlar gastos mensais sem planilhas complexas.',
     solution:
-      'Aplicação React com categorização em tempo real, gráficos de gastos com Recharts e exportação CSV — sem necessidade de cadastro.',
+      'Aplicação React com categorização em tempo real, gráficos de gastos com Recharts e exportação CSV, sem necessidade de cadastro.',
     result: 'Adotado organicamente por mais de 200 usuários sem nenhum investimento em aquisição paga.',
     tech: ['React', 'Recharts', 'LocalStorage', 'Tailwind CSS'],
     img: '/img/controle-gastos-preview.png',
@@ -113,7 +113,7 @@ const projects = [
     github: 'https://github.com/fflucasff/Controle-de-Gastos',
   },
   {
-    title: 'Calculadora – Postaqui',
+    title: 'Calculadora Postaqui',
     tag: 'Ferramenta Web',
     tagColor: 'from-amber-400 to-yellow-700',
     problem:
@@ -201,7 +201,7 @@ function ProjectCard({ project }) {
         </div>
       )}
 
-      <div className="p-7">
+      <div className="p-5 sm:p-7">
         {/* Title row */}
         <div className="flex items-center justify-between gap-4 mb-5">
           <h3 className="text-lg font-bold text-white">{project.title}</h3>
@@ -220,14 +220,14 @@ function ProjectCard({ project }) {
         </div>
 
         {/* Case study */}
-        <div className="space-y-3 mb-5">
+        <div className="space-y-3.5 mb-5">
           {[
-            { label: 'Problema', content: project.problem, color: 'text-red-400' },
-            { label: 'Solução', content: project.solution, color: 'text-amber-400' },
-            { label: 'Resultado', content: project.result, color: 'text-emerald-400' },
+            { label: 'Problema', content: project.problem, color: 'text-red-400', border: 'border-red-400/30' },
+            { label: 'Solução', content: project.solution, color: 'text-amber-400', border: 'border-amber-400/30' },
+            { label: 'Resultado', content: project.result, color: 'text-emerald-400', border: 'border-emerald-400/30' },
           ].map((col) => (
-            <div key={col.label} className="flex gap-2">
-              <span className={`text-xs font-mono font-bold tracking-widest uppercase flex-shrink-0 w-16 mt-0.5 ${col.color}`}>
+            <div key={col.label} className={`border-l-2 pl-3 ${col.border}`}>
+              <span className={`block text-[10px] font-mono font-bold tracking-[0.15em] uppercase mb-1 ${col.color}`}>
                 {col.label}
               </span>
               <p className="text-xs text-slate-400 leading-relaxed">{col.content}</p>
@@ -251,10 +251,10 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24">
+    <section id="projects" className="relative py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 sm:mb-16">
           <div className="reveal">
             <span className="section-label mb-4">Estudos de Caso</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">

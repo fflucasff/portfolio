@@ -9,7 +9,7 @@ const services = [
     title: 'Landing Pages de Alta Conversão',
     tag: 'Conversão & Design',
     description:
-      'Páginas construídas para vender — não apenas para impressionar. Combino psicologia de UX, estrutura de copy persuasiva e otimização contínua para transformar visitantes em clientes.',
+      'Páginas construídas para vender, não apenas para impressionar. Combino psicologia de UX, estrutura de copy persuasiva e otimização contínua para transformar visitantes em clientes.',
     outcomes: ['Até 3x mais conversões', 'Mobile-first e carregamento rápido', 'Integração com CRM e pixels'],
     color: 'from-amber-400 to-yellow-700',
     glow: 'rgba(212, 175, 55, 0.15)',
@@ -19,7 +19,7 @@ const services = [
     title: 'Tracking & Análise de Dados',
     tag: 'Dados & Performance',
     description:
-      'Stack completo de atribuição: Facebook Pixel, Google Tag Manager, UTM, integração com RedTrack — para você saber exatamente de onde vem cada real investido.',
+      'Stack completo de atribuição: Facebook Pixel, Google Tag Manager, UTM e integração com RedTrack, para você saber exatamente de onde vem cada real investido.',
     outcomes: ['Zero perda de dados', 'Atribuição full-funnel', 'Eventos e conversões customizadas'],
     color: 'from-yellow-500 to-amber-800',
     glow: 'rgba(240, 200, 105, 0.15)',
@@ -39,7 +39,7 @@ const services = [
     title: 'Sites Institucionais & Sistemas Web',
     tag: 'Desenvolvimento Web',
     description:
-      'De sites de autoridade a aplicações web completas — entrego código limpo, arquitetura escalável e performance de produção com React, Node.js e integrações de API.',
+      'De sites de autoridade a aplicações web completas, com código limpo, arquitetura escalável e performance de produção usando React, Node.js e integrações de API.',
     outcomes: ['Stack React + Node.js', 'Integrações de API', 'Arquitetura escalável'],
     color: 'from-amber-400 to-yellow-700',
     glow: 'rgba(245, 215, 142, 0.15)',
@@ -48,20 +48,20 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-16 sm:py-24 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] pointer-events-none opacity-[0.04]"
         style={{ background: 'radial-gradient(ellipse, #d4af37 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Header */}
-        <div className="max-w-xl mb-16 reveal">
+        <div className="max-w-xl mb-10 sm:mb-16 reveal">
           <span className="section-label mb-4">O Que Faço</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-4">
             Serviços focados em{' '}
             <span className="text-gradient">resultado para o seu negócio</span>
           </h2>
           <p className="text-slate-400 leading-relaxed">
-            Não entrego apenas código — entrego sistemas que geram resultados mensuráveis.
+            Não entrego apenas código. Entrego sistemas que geram resultados mensuráveis.
             Cada solução é pensada para impactar diretamente o crescimento da sua empresa.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function Services() {
           {services.map((service, i) => {
             const Icon = service.icon
             return (
-              <div key={service.title} className="reveal glass glass-hover rounded-2xl p-7 group cursor-default"
+              <div key={service.title} className="reveal glass glass-hover rounded-2xl p-5 sm:p-7 group cursor-default"
                 style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div className="flex items-start justify-between mb-5">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}

@@ -5,7 +5,7 @@ const WA_LINK =
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative py-28 overflow-hidden">
+    <section id="contact" className="relative py-20 sm:py-28 overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%)' }} />
@@ -24,7 +24,7 @@ export default function CTA() {
             Disponível para novos projetos
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white mb-6">
             Pronto para escalar{' '}
             <br className="hidden sm:block" />
             <span className="text-gradient">o seu negócio digital?</span>
@@ -32,7 +32,7 @@ export default function CTA() {
 
           <p className="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-12">
             Seja uma landing page de alta conversão, um stack completo de tracking ou um sistema web
-            personalizado — estou pronto para executar. Vamos conversar sobre estratégia primeiro.
+            personalizado, estou pronto para executar. Vamos conversar sobre estratégia primeiro.
           </p>
 
           {/* CTA buttons */}
