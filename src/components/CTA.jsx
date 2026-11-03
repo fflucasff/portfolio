@@ -53,11 +53,11 @@ export default function CTA() {
           </div>
 
           {/* Trust strip */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-mono">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-mono">
             {[
-              '✓ Resposta em até 24h',
-              '✓ Consultoria estratégica gratuita',
-              '✓ Preço fixo, sem surpresas',
+              'Resposta em até 24h',
+              'Conversa inicial sobre estratégia, sem custo',
+              'Escopo e investimento definidos antes do início do projeto',
             ].map((item) => (
               <span key={item} className="tracking-wide">{item}</span>
             ))}

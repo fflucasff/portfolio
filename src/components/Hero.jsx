@@ -120,10 +120,12 @@ export default function Hero() {
         {/* Subheadline */}
         <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10"
           style={{ animation: 'fade-up 0.7s ease 0.25s both' }}>
-          Desenvolvedor especializado em{' '}
-          <span className="text-slate-200 font-medium">landing pages de alta conversão</span>,{' '}
-          <span className="text-slate-200 font-medium">sistemas de rastreamento</span> e{' '}
-          <span className="text-slate-200 font-medium">funis digitais</span> para empresas que levam crescimento a sério.
+          Desenvolvo{' '}
+          <span className="text-slate-200 font-medium">sites, landing pages e sistemas web</span>{' '}
+          para empresas que precisam gerar oportunidades comerciais, com atenção
+          especial a{' '}
+          <span className="text-slate-200 font-medium">clínicas e serviços de alto valor</span>,
+          onde a decisão do cliente depende de confiança.
         </p>
 
         {/* CTA Buttons */}
@@ -148,20 +150,20 @@ export default function Hero() {
         <div className="mt-12 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-8 md:gap-14 max-w-2xl mx-auto"
           style={{ animation: 'fade-up 0.7s ease 0.55s both' }}>
           {[
-            { value: '+100', label: 'Projetos entregues' },
-            { value: '100%', label: 'Satisfação dos clientes' },
-            { value: '3x', label: 'Aumento em conversões' },
+            { value: 'React', label: 'TypeScript e Vite' },
+            { value: 'A partir de R$ 1.299', label: 'Escopo definido antes de começar' },
+            { value: 'Tracking', label: 'GTM, Meta Pixel e Analytics' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-black text-gradient-warm">{stat.value}</div>
-              <div className="text-[10px] sm:text-xs text-slate-500 mt-1 tracking-wide uppercase font-mono leading-snug">{stat.label}</div>
+              <div className="text-base sm:text-xl font-black text-gradient-warm leading-tight">{stat.value}</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 mt-1 tracking-wide uppercase font-mono leading-snug">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <a href="#proof" className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-slate-600 hover:text-slate-400 transition-colors"
+      <a href="#proof" className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-slate-400 hover:text-slate-400 transition-colors"
         style={{ animation: 'fade-in 1s ease 1s both' }}>
         <span className="text-xs font-mono tracking-widest uppercase">Role para baixo</span>
         <ChevronDown size={16} className="animate-bounce" />

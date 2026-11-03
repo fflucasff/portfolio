@@ -85,40 +85,53 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Proficiency bars */}
+        {/* Onde cada competência aparece, com evidência nos projetos */}
         <div className="glass rounded-2xl p-5 sm:p-7 reveal">
-          <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-500 mb-6">
-            Nível de proficiência
+          <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-400 mb-6">
+            Onde essas competências aparecem
           </h3>
-          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-5">
+          <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
             {[
-              { skill: 'React / Frontend', level: 92 },
-              { skill: 'Tracking & Analytics', level: 95 },
-              { skill: 'Landing Pages CRO', level: 90 },
-              { skill: 'Estruturação de Funis', level: 85 },
-              { skill: 'Node.js / Backend', level: 75 },
-              { skill: 'UI/UX Design', level: 80 },
-            ].map((item, i) => (
+              {
+                skill: 'Interface e acessibilidade',
+                evidencia:
+                  'Os seis projetos são auditados em cinco larguras, com contraste conferido no critério AA, foco visível e navegação por teclado.',
+              },
+              {
+                skill: 'Lógica de negócio no navegador',
+                evidencia:
+                  'O Escopo calcula orçamento em centavos inteiros e tem 12 testes automatizados cobrindo arredondamento e casos de borda.',
+              },
+              {
+                skill: 'Conversão em serviço de alto valor',
+                evidencia:
+                  'Os cinco estudos de clínica usam estratégias distintas de qualificação, formulário validado e confirmação explícita.',
+              },
+              {
+                skill: 'Tracking e atribuição',
+                evidencia:
+                  'Google Tag Manager, Meta Pixel e Analytics implantados em projetos de cliente, com eventos conferidos após a publicação.',
+              },
+              {
+                skill: 'Publicação e automação',
+                evidencia:
+                  'Cada projeto publica por GitHub Actions, com checagem de tipos e build rodando antes de ir ao ar.',
+              },
+              {
+                skill: 'Direção visual própria',
+                evidencia:
+                  'Cada estudo tem tipografia, paleta e estrutura próprias, em vez do mesmo layout com cores trocadas.',
+              },
+            ].map((item) => (
               <div key={item.skill}>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm text-slate-300 font-medium">{item.skill}</span>
-                  <span className="text-xs font-mono text-amber-400">{item.level}%</span>
-                </div>
-                <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden">
-                  <div className="h-full rounded-full"
-                    style={{ width: `${item.level}%`, background: 'linear-gradient(90deg, #8a6d1f, #d4af37)', animation: `progress-grow 1.2s ease ${i * 0.1 + 0.5}s both` }} />
-                </div>
+                <div className="text-sm text-slate-200 font-semibold mb-1.5">{item.skill}</div>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.evidencia}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <style>{`
-        @keyframes progress-grow {
-          from { width: 0; }
-        }
-      `}</style>
     </section>
   )
 }

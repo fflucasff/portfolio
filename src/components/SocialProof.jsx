@@ -1,35 +1,35 @@
-import { TrendingUp, Globe, Target, Users } from 'lucide-react'
+import { Gauge, Smartphone, Target, TrendingUp } from 'lucide-react'
 
 const stats = [
   {
-    icon: Globe,
-    value: '+100',
-    label: 'Projetos digitais',
-    desc: 'Sites, sistemas e funis entregues com qualidade',
+    icon: Target,
+    value: 'Escopo antes do preço',
+    label: 'Proposta por escrito',
+    desc: 'Você recebe o que será entregue, o prazo e o investimento antes do projeto começar',
     color: 'from-amber-400 to-yellow-700',
     glow: 'rgba(212, 175, 55, 0.2)',
   },
   {
-    icon: TrendingUp,
-    value: '3x',
-    label: 'Mais conversões',
-    desc: 'Média de melhoria em landing pages otimizadas',
+    icon: Gauge,
+    value: 'Build estático',
+    label: 'Carregamento rápido',
+    desc: 'Sites publicados como arquivos estáticos, sem servidor para cair nem plugin para atualizar',
     color: 'from-yellow-500 to-amber-700',
     glow: 'rgba(240, 200, 105, 0.2)',
   },
   {
-    icon: Target,
-    value: '100%',
-    label: 'Rastreamento preciso',
-    desc: 'Implementações de tracking sem perda de dados',
+    icon: Smartphone,
+    value: '360 a 1440 px',
+    label: 'Testado em cada largura',
+    desc: 'Cada entrega é verificada em cinco larguras, com checagem de contraste e navegação por teclado',
     color: 'from-amber-500 to-yellow-800',
     glow: 'rgba(138, 109, 31, 0.2)',
   },
   {
-    icon: Users,
-    value: '15+',
-    label: 'Clientes atendidos',
-    desc: 'Em e-commerce, serviços e infoprodutos',
+    icon: TrendingUp,
+    value: 'Medição configurada',
+    label: 'Você sabe de onde vem',
+    desc: 'Google Tag Manager, Meta Pixel e Analytics instalados e conferidos na entrega',
     color: 'from-yellow-400 to-amber-600',
     glow: 'rgba(245, 215, 142, 0.2)',
   },
@@ -49,10 +49,10 @@ export default function SocialProof() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Label */}
         <div className="text-center mb-10 sm:mb-16 reveal">
-          <span className="section-label mb-4">Resultados</span>
+          <span className="section-label mb-4">Método</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-4">
-            Empresas que crescem com{' '}
-            <span className="text-gradient">estratégia e tecnologia</span>
+            Como eu trabalho, de{' '}
+            <span className="text-gradient">ponta a ponta</span>
           </h2>
         </div>
 
@@ -67,9 +67,9 @@ export default function SocialProof() {
                   style={{ boxShadow: `0 8px 20px ${stat.glow}` }}>
                   <Icon size={18} className="text-white" />
                 </div>
-                <div className="text-3xl font-black text-white mb-1">{stat.value}</div>
+                <div className="text-lg font-black text-white mb-1 leading-tight">{stat.value}</div>
                 <div className="text-sm font-semibold text-slate-200 mb-2">{stat.label}</div>
-                <div className="text-xs text-slate-500 leading-relaxed">{stat.desc}</div>
+                <div className="text-xs text-slate-400 leading-relaxed">{stat.desc}</div>
               </div>
             )
           })}
@@ -77,14 +77,14 @@ export default function SocialProof() {
 
         {/* Technologies ticker */}
         <div className="reveal">
-          <p className="text-center text-xs font-mono tracking-widest uppercase text-slate-600 mb-6">
+          <p className="text-center text-xs font-mono tracking-widest uppercase text-slate-400 mb-6">
             Ferramentas e plataformas que domino
           </p>
           <div className="relative overflow-hidden">
             <div className="flex gap-6 items-center" style={{ animation: 'scroll-x 22s linear infinite', width: 'max-content' }}>
               {[...logos, ...logos].map((logo, i) => (
                 <span key={i}
-                  className="text-slate-500 text-sm font-medium whitespace-nowrap px-4 py-2 rounded-lg border border-white/5 hover:border-amber-500/30 hover:text-slate-300 transition-colors cursor-default">
+                  className="text-slate-400 text-sm font-medium whitespace-nowrap px-4 py-2 rounded-lg border border-white/5 hover:border-amber-500/30 hover:text-slate-300 transition-colors cursor-default">
                   {logo}
                 </span>
               ))}

@@ -32,7 +32,7 @@ export default function Footer() {
                 LFF<span className="text-gradient"> Industries</span>
               </span>
             </a>
-            <p className="text-xs text-slate-600 max-w-[220px] leading-relaxed text-center md:text-left">
+            <p className="text-xs text-slate-400 max-w-[220px] leading-relaxed text-center md:text-left">
               Sistemas digitais de alto desempenho para empresas que levam crescimento a sério.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
           <nav className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href}
-                className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+                className="text-xs text-slate-400 hover:text-slate-300 transition-colors">
                 {link.label}
               </a>
             ))}
@@ -54,7 +54,7 @@ export default function Footer() {
               return (
                 <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/8 text-slate-500 hover:text-white hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-200">
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/8 text-slate-400 hover:text-white hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-200">
                   <Icon size={15} />
                 </a>
               )
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/5 flex items-center justify-center">
-          <p className="text-xs text-slate-700 font-mono">
+          <p className="text-xs text-slate-400 font-mono">
             © {new Date().getFullYear()} LFF Industries · Lucas Figueiredo Fernandes
           </p>
         </div>

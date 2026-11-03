@@ -10,7 +10,7 @@ const services = [
     tag: 'Conversão & Design',
     description:
       'Páginas construídas para vender, não apenas para impressionar. Combino psicologia de UX, estrutura de copy persuasiva e otimização contínua para transformar visitantes em clientes.',
-    outcomes: ['Até 3x mais conversões', 'Mobile-first e carregamento rápido', 'Integração com CRM e pixels'],
+    outcomes: ['Estrutura pensada para o visitante agir', 'Carregamento rápido e layout testado no celular', 'Formulário validado e medição configurada'],
     color: 'from-amber-400 to-yellow-700',
     glow: 'rgba(212, 175, 55, 0.15)',
   },
@@ -20,7 +20,7 @@ const services = [
     tag: 'Dados & Performance',
     description:
       'Stack completo de atribuição: Facebook Pixel, Google Tag Manager, UTM e integração com RedTrack, para você saber exatamente de onde vem cada real investido.',
-    outcomes: ['Zero perda de dados', 'Atribuição full-funnel', 'Eventos e conversões customizadas'],
+    outcomes: ['Eventos definidos junto com você', 'Atribuição da origem ao contato', 'Conferência dos disparos após publicar'],
     color: 'from-yellow-500 to-amber-800',
     glow: 'rgba(240, 200, 105, 0.15)',
   },
@@ -103,13 +103,63 @@ export default function Services() {
           })}
         </div>
 
+        {/* Investimento */}
+        <div className="mt-12 reveal glass rounded-2xl p-6 sm:p-8" style={{ border: '1px solid rgba(212,175,55,0.22)' }}>
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 items-start">
+            <div>
+              <h3 className="text-2xl font-bold text-white leading-tight">
+                Projetos a partir de{' '}
+                <span className="text-gradient">R$ 1.299</span>
+              </h3>
+              <p className="text-sm text-slate-400 mt-3 leading-relaxed">
+                Esse é o valor inicial do projeto mais simples, uma landing page
+                enxuta. Não é preço de tabela para qualquer página, porque o
+                investimento final depende do que o projeto realmente exige.
+              </p>
+              <p className="text-sm text-slate-400 mt-3 leading-relaxed">
+                Sites institucionais, funis, sistemas web e projetos para
+                clínicas são orçados depois da análise do escopo.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-amber-400 mb-3">
+                O que faz o investimento variar
+              </h4>
+              <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                {[
+                  'Quantidade de seções',
+                  'Complexidade do design',
+                  'Produção ou revisão de copy',
+                  'Formulários e integrações',
+                  'Tracking e analytics',
+                  'Animações',
+                  'Prazo de entrega',
+                  'Funcionalidades específicas',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-slate-300">
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                      style={{ background: 'linear-gradient(135deg, #d4af37, #8a6d1f)' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-slate-400 mt-4 leading-relaxed">
+                Escopo e investimento são definidos por escrito antes do início
+                do projeto.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA */}
-        <div className="mt-12 text-center reveal">
+        <div className="mt-10 text-center reveal">
           <p className="text-slate-400 mb-6 text-sm">
-            Não sabe por onde começar? Vamos mapear a estratégia certa para o seu negócio.
+            Receba uma proposta de acordo com o seu objetivo, prazo e
+            necessidades técnicas.
           </p>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            <span>Agendar uma conversa gratuita</span>
+            <span>Solicitar uma proposta</span>
           </a>
         </div>
       </div>

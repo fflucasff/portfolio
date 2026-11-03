@@ -14,7 +14,7 @@ const traits = [
   },
   {
     title: 'Obsessão por performance',
-    desc: 'Carregamento rápido, código limpo, zero perda de dados de tracking. Qualidade é inegociável em tudo que entrego.',
+    desc: 'Build estático, código revisado e checagem de responsividade, contraste e navegação por teclado em cada entrega, conferidos no site já publicado.',
   },
   {
     title: 'Comunicação clara',
@@ -26,8 +26,8 @@ const timeline = [
   { year: '2021', event: 'Início no desenvolvimento web com HTML, CSS e JavaScript' },
   { year: '2022', event: 'Primeiros projetos para clientes: sites e landing pages' },
   { year: '2023', event: 'Expansão para tracking, funis digitais e React' },
-  { year: '2024', event: 'Projetos com empresas focadas em performance digital' },
-  { year: 'Hoje', event: 'Construindo sistemas digitais de alto impacto para negócios sérios', active: true },
+  { year: '2024', event: 'Projetos para clientes com foco em captação e medição' },
+  { year: 'Hoje', event: 'Estudos conceituais para clínicas e produtos autorais publicados', active: true },
 ]
 
 export default function About() {
@@ -66,7 +66,7 @@ export default function About() {
                   <CheckCircle2 size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{trait.title}</div>
-                    <div className="text-sm text-slate-500 leading-relaxed">{trait.desc}</div>
+                    <div className="text-sm text-slate-400 leading-relaxed">{trait.desc}</div>
                   </div>
                 </div>
               ))}
@@ -104,9 +104,9 @@ export default function About() {
               <div>
                 <div className="text-base font-bold text-white">Lucas Figueiredo Fernandes</div>
                 <div className="text-sm text-amber-400 font-mono mb-1">LFF Industries</div>
-                <div className="text-xs text-slate-500">Full-Stack Dev · Growth Engineer</div>
+                <div className="text-xs text-slate-400">Full-Stack Dev · Growth Engineer</div>
                 <div className="flex gap-3 mt-2 justify-center xs:justify-start">
-                  <a href="mailto:lff.industries@gmail.com" className="text-xs text-slate-500 hover:text-slate-300 transition-colors break-all">
+                  <a href="mailto:lff.industries@gmail.com" className="text-xs text-slate-400 hover:text-slate-300 transition-colors break-all">
                     lff.industries@gmail.com
                   </a>
                 </div>
@@ -115,7 +115,7 @@ export default function About() {
 
             {/* Timeline */}
             <div className="glass rounded-2xl p-5 sm:p-7">
-              <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-500 mb-7">
+              <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-slate-400 mb-7">
                 Trajetória
               </h3>
               <div className="space-y-0">
@@ -132,10 +132,10 @@ export default function About() {
                       )}
                     </div>
                     <div className="pb-6">
-                      <span className={`text-xs font-mono font-bold tracking-wider ${item.active ? 'text-amber-400' : 'text-slate-600'}`}>
+                      <span className={`text-xs font-mono font-bold tracking-wider ${item.active ? 'text-amber-400' : 'text-slate-400'}`}>
                         {item.year}
                       </span>
-                      <p className={`text-sm mt-0.5 leading-relaxed ${item.active ? 'text-slate-200 font-medium' : 'text-slate-500'}`}>
+                      <p className={`text-sm mt-0.5 leading-relaxed ${item.active ? 'text-slate-200 font-medium' : 'text-slate-400'}`}>
                         {item.event}
                       </p>
                     </div>
