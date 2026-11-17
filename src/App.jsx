@@ -4,8 +4,40 @@ import Marca, { Simbolo } from './components/Marca'
 import { NATUREZA, conceituais, destaques, outros } from './data/projetos'
 
 const WHATSAPP =
-  'https://wa.me/5535991623621?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LFF%20Industries%20e%20quero%20conversar%20sobre%20um%20projeto.'
+  'https://wa.me/5535991623621?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LFF%20Industries%20e%20quero%20um%20or%C3%A7amento.'
 const EMAIL = 'mailto:lff.industries@gmail.com'
+
+const FERRAMENTAS = [
+  ['React', '#0ea5c6'], ['TypeScript', '#3178c6'], ['Node.js', '#3c873a'], ['Next.js', '#16181a'],
+  ['Python', '#3776ab'], ['FastAPI', '#009688'], ['PostgreSQL', '#336791'],
+  ['Google Tag Manager', '#246fdb'], ['Meta Pixel', '#0866ff'], ['API de Conversões', '#0866ff'],
+  ['Google Analytics', '#e37400'], ['RedTrack', '#d92d20'], ['Meta Ads', '#0866ff'],
+  ['Hotjar', '#ff3c00'], ['WordPress', '#21759b'], ['Tailwind CSS', '#0891b2'],
+  ['Cloudflare', '#f38020'], ['Vercel', '#16181a'],
+]
+
+/** Bloco de zeros e uns, gerado sempre igual (semente fixa) pra não mudar a cada render. */
+function Binario({ linhas = 60, colunas = 72, className = '' }) {
+  let x = 7
+  const rnd = () => ((x = (x * 9301 + 49297) % 233280) / 233280)
+  const texto = Array.from({ length: linhas }, () =>
+    Array.from({ length: colunas }, () => (rnd() > 0.5 ? '1' : '0')).join(' '),
+  ).join('\n')
+  return (
+    <pre className={`binario ${className}`} aria-hidden="true">
+      {texto}
+    </pre>
+  )
+}
+
+const DUVIDAS = [
+  ['E se eu não gostar do visual?', 'Você aprova a direção visual antes de qualquer linha de código. Se não estiver bom, ajusta ali, quando mudar ainda é barato, e não depois do site pronto.'],
+  ['Preciso escrever os textos?', 'Não. A LFF escreve com você a partir de uma conversa. Você revisa e aprova, sem precisar sentar pra redigir nada.'],
+  ['Quanto tempo leva?', 'Uma landing page fica pronta em até 7 dias úteis. Site institucional e sistema têm o prazo definido por escrito no escopo, antes de começar.'],
+  ['Quanto custa?', 'Landing page a partir de R$ 1.299. Os outros projetos são orçados depois de entender o escopo, e você recebe o valor fechado por escrito antes de começar.'],
+  ['Vou saber de onde vêm os meus clientes?', 'Sim. Todo site sai com a medição configurada e conferida no ar: você sabe quantas pessoas entraram e quantas chamaram no WhatsApp.'],
+  ['Já tenho um site. Vale refazer?', 'Às vezes não. Se o problema for só um ajuste ou a medição, a LFF diz isso logo na primeira conversa, em vez de vender um site novo.'],
+]
 
 
 const navegacao = [
@@ -70,20 +102,22 @@ export default function App() {
         {/* ------------------------------------------------------ abertura */}
         <section className="faixa abertura" id="topo">
           <div>
-            <h1>Sites e sistemas para empresas que precisam ser levadas a sério.</h1>
+            <h1>Antes de chamar, o cliente pesquisa você.</h1>
             <p className="abertura-sub">
-              A LFF Industries desenha, escreve e programa cada projeto do zero:
-              sites, landing pages, sistemas web e tracking para consultórios,
-              clínicas, comércio e profissionais que vendem pelo próprio nome.
+              E o que ele encontra decide se ele chama. A LFF Industries cria
+              sites, landing pages e sistemas que fazem a sua empresa parecer
+              exatamente o que ela é: a escolha certa. Do
+              zero, sem template, e no ar em dias, não em meses.
             </p>
             <div className="abertura-acoes">
               <a className="link-acao" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                Fale com a LFF
+                Quero meu orçamento
               </a>
               <a className="link-sublinhado" href="#trabalho">
-                Ver projetos
+                Ver projetos no ar
               </a>
             </div>
+            <p className="abertura-micro">Resposta no mesmo dia útil. Sem compromisso.</p>
           </div>
 
           <figure className="abertura-figura">
@@ -109,7 +143,7 @@ export default function App() {
         {/* ------------------------------------------------------- números */}
         <section className="faixa numeros" aria-label="A LFF Industries em números">
           {[
-            [String(destaques.length + outros.length + conceituais.length), 'projetos publicados e acessíveis'],
+            ['+100', 'projetos publicados pelo time, dentro e fora da LFF'],
             ['100%', 'código próprio, sem tema pronto'],
             ['7 dias úteis', 'prazo de uma landing page'],
             ['Por escrito', 'escopo, prazo e valor antes de começar'],
@@ -121,13 +155,32 @@ export default function App() {
           ))}
         </section>
 
+        {/* -------------------------------------------------------- stack */}
+        <section className="faixa marquee-faixa" aria-label="Ferramentas e plataformas">
+          <p className="marquee-rotulo">Ferramentas e plataformas que a LFF domina</p>
+          <div className="marquee">
+            <div className="marquee-trilho">
+              {[...FERRAMENTAS, ...FERRAMENTAS].map(([f, cor], i) => (
+                <span
+                  className="marquee-item"
+                  key={i}
+                  style={{ '--cor': cor }}
+                  aria-hidden={i >= FERRAMENTAS.length}
+                >
+                  {f}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ----------------------------------------------------- destaques */}
         <section className="faixa secao" id="trabalho">
           <div className="secao-topo">
-            <h2>Trabalho selecionado</h2>
+            <h2>Não é mockup. Está no ar.</h2>
             <p>
-              Seis projetos que mostram a amplitude: site de cliente, produto
-              que mantenho no ar e ferramenta que uso no dia a dia.
+              Clique em qualquer projeto e veja funcionando, no celular ou no
+              computador. Prova que dá pra conferir vale mais do que promessa.
             </p>
           </div>
 
@@ -211,7 +264,7 @@ export default function App() {
         {/* ------------------------------------------------------ serviços */}
         <section className="faixa secao" id="servicos">
           <div className="secao-topo">
-            <h2>O que a LFF faz</h2>
+            <h2>Seis formas de parar de perder cliente pro concorrente</h2>
             <p>Seis frentes. A maioria dos projetos combina duas ou três.</p>
           </div>
 
@@ -232,7 +285,11 @@ export default function App() {
               <p className="investimento-valor">R$ 1.299</p>
             </div>
             <div>
-              <p style={{ marginTop: 0 }}>
+              <p className="investimento-gancho">
+                Quanto custa um cliente que pesquisou o seu nome, não gostou do
+                que viu e chamou o concorrente? Provavelmente mais do que isso.
+              </p>
+              <p>
                 Esse é o valor do projeto mais simples da LFF: uma landing
                 page enxuta, de poucas seções. Não é tabela: o que muda o preço
                 é a quantidade de seções, a complexidade do desenho, se o texto
@@ -253,6 +310,7 @@ export default function App() {
 
         {/* ------------------------------------------------------ tracking */}
         <section className="secao-tinta" id="tracking">
+          <Binario />
           <div className="faixa secao">
             <p className="tracking-rotulo">Tracking</p>
             <h2 className="tracking-titulo">Não é o criativo. Não é o público. É o dado.</h2>
@@ -397,13 +455,33 @@ export default function App() {
           </ol>
         </section>
 
+        {/* --------------------------------------------------------- dúvidas */}
+        <section className="faixa secao" id="duvidas">
+          <div className="secao-topo">
+            <h2>O que todo mundo pergunta antes de fechar</h2>
+          </div>
+          <div className="duvidas">
+            {DUVIDAS.map(([pergunta, resposta]) => (
+              <details className="duvida" key={pergunta}>
+                <summary>{pergunta}</summary>
+                <p>{resposta}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* -------------------------------------------------------- contato */}
         <section className="contato" id="contato">
+          <Binario className="binario-contato" />
           <div className="faixa contato-interno">
-            <h2>Tem um projeto em mente? Conte o que precisa funcionar melhor.</h2>
+            <h2>Conte o problema. Em um dia útil você sabe se dá, quanto custa e quando fica pronto.</h2>
             <p>
-              Resposta normalmente no mesmo dia útil, direto com quem vai tocar o
-              projeto. Pode mandar o link do site atual, um print ou só a ideia solta.
+              Pode mandar o link do site atual, um print ou só a ideia solta. Quem
+              responde é quem vai tocar o projeto.
+            </p>
+            <p className="contato-prazo">
+              <strong>Quer o site no ar antes do Natal?</strong> Landing pages
+              fechadas até 11 de dezembro são entregues até 22 de dezembro.
             </p>
             <div className="contato-canais">
               <a
@@ -412,7 +490,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Falar no WhatsApp
+                Receber orçamento no WhatsApp
               </a>
               <a className="canal" href={EMAIL}>
                 lff.industries@gmail.com
