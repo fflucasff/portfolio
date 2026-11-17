@@ -3,7 +3,7 @@ import Marca, { Simbolo } from './components/Marca'
 import { NATUREZA, conceituais, destaques, outros } from './data/projetos'
 
 const WHATSAPP =
-  'https://wa.me/5535991623621?text=Oi%20Lucas%2C%20vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto.'
+  'https://wa.me/5535991623621?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LFF%20Industries%20e%20quero%20conversar%20sobre%20um%20projeto.'
 const EMAIL = 'mailto:lff.industries@gmail.com'
 
 const navegacao = [
@@ -68,18 +68,18 @@ export default function App() {
         {/* ------------------------------------------------------ abertura */}
         <section className="faixa abertura" id="topo">
           <div>
-            <h1>Sou o Lucas. Eu desenho e programo o site inteiro.</h1>
+            <h1>Sites e sistemas para empresas que precisam ser levadas a sério.</h1>
             <p className="abertura-sub">
-              Trabalho sozinho com empresas que precisam ser levadas a sério
-              quando alguém procura por elas: consultórios, clínicas, lojas de
-              bairro e profissionais que vendem pelo próprio nome.
+              A LFF Industries desenha, escreve e programa cada projeto do zero:
+              sites, landing pages, sistemas web e tracking para consultórios,
+              clínicas, comércio e profissionais que vendem pelo próprio nome.
             </p>
             <div className="abertura-acoes">
               <a className="link-acao" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                Me conte o que precisa
+                Fale com a LFF
               </a>
               <a className="link-sublinhado" href="#trabalho">
-                Ver o trabalho
+                Ver projetos
               </a>
             </div>
           </div>
@@ -102,6 +102,21 @@ export default function App() {
               </span>
             </figcaption>
           </figure>
+        </section>
+
+        {/* ------------------------------------------------------- números */}
+        <section className="faixa numeros" aria-label="A LFF Industries em números">
+          {[
+            [String(destaques.length + outros.length + conceituais.length), 'projetos publicados e acessíveis'],
+            ['100%', 'código próprio, sem tema pronto'],
+            ['7 dias úteis', 'prazo de uma landing page'],
+            ['Por escrito', 'escopo, prazo e valor antes de começar'],
+          ].map(([valor, rotulo]) => (
+            <div className="numero" key={rotulo}>
+              <p className="numero-valor">{valor}</p>
+              <p className="numero-rotulo">{rotulo}</p>
+            </div>
+          ))}
         </section>
 
         {/* ----------------------------------------------------- destaques */}
@@ -160,8 +175,8 @@ export default function App() {
             <div className="secao-topo">
               <h2>Explorações para o setor de saúde</h2>
               <p>
-                Cinco marcas que eu inventei para testar como um site de clínica
-                pode ganhar confiança sem prometer resultado. Não são clientes,
+                Cinco marcas fictícias criadas pela LFF para testar como um site
+                de clínica pode ganhar confiança sem prometer resultado. Não são clientes,
                 e cada uma tem identidade e argumento próprios.
               </p>
             </div>
@@ -194,7 +209,7 @@ export default function App() {
         {/* ------------------------------------------------------ serviços */}
         <section className="faixa secao" id="servicos">
           <div className="secao-topo">
-            <h2>O que eu faço</h2>
+            <h2>O que a LFF faz</h2>
             <p>Três frentes. Na prática, a maioria dos projetos mistura duas.</p>
           </div>
 
@@ -203,7 +218,7 @@ export default function App() {
               <h3>Sites e landing pages</h3>
               <p>
                 Página única ou site completo, escrito e desenhado do zero.
-                Entrego publicado, com domínio apontado e medição funcionando.
+                Entregue publicado, com domínio apontado e medição funcionando.
               </p>
               <ul>
                 <li>Redação do conteúdo junto com você</li>
@@ -228,8 +243,8 @@ export default function App() {
             <article className="servico">
               <h3>Tracking e integrações</h3>
               <p>
-                Saber de onde vem cada contato. Instalo, nomeio os eventos e
-                confiro os disparos com você depois que o site está no ar.
+                Saber de onde vem cada contato. Os eventos são instalados,
+                nomeados e conferidos com você depois que o site está no ar.
               </p>
               <ul>
                 <li>Google Tag Manager, Analytics e Meta Pixel</li>
@@ -255,15 +270,15 @@ export default function App() {
             </div>
             <div>
               <p style={{ marginTop: 0 }}>
-                Esse é o valor do projeto mais simples que eu faço: uma landing
+                Esse é o valor do projeto mais simples da LFF: uma landing
                 page enxuta, de poucas seções. Não é tabela: o que muda o preço
-                é a quantidade de seções, a complexidade do desenho, se eu
-                escrevo ou reviso o texto, formulários e integrações, tracking,
+                é a quantidade de seções, a complexidade do desenho, se o texto
+                é escrito ou revisado pela LFF, formulários e integrações, tracking,
                 animação, prazo e funcionalidades específicas.
               </p>
               <p>
-                Site institucional, sistema web e projeto para clínica eu só
-                orço depois de entender o escopo, porque o intervalo é grande
+                Site institucional, sistema web e projeto para clínica só são
+                orçados depois de entender o escopo, porque o intervalo é grande
                 demais para um número solto.
               </p>
               <p className="investimento-regra">
@@ -273,10 +288,35 @@ export default function App() {
           </div>
         </section>
 
+        {/* ---------------------------------------------------- tecnologias */}
+        <section className="faixa secao" id="tecnologias" style={{ paddingTop: 0 }}>
+          <div className="secao-topo">
+            <h2>As ferramentas por trás de cada entrega</h2>
+            <p>O que está rodando nos projetos que a LFF publica.</p>
+          </div>
+          <div className="stack">
+            {[
+              ['Frontend', ['React', 'TypeScript', 'Tailwind CSS', 'HTML e CSS', 'JavaScript']],
+              ['Backend e dados', ['Node.js', 'Python (FastAPI)', 'PostgreSQL', 'APIs REST', 'Firebase']],
+              ['Tracking e marketing', ['Google Tag Manager', 'Meta Pixel', 'Google Analytics', 'RedTrack', 'UTM e atribuição']],
+              ['Publicação', ['Git e GitHub', 'Vite', 'Vercel', 'Cloudflare', 'Domínio e SSL']],
+            ].map(([grupo, itens]) => (
+              <div className="stack-grupo" key={grupo}>
+                <h3>{grupo}</h3>
+                <ul>
+                  {itens.map((i) => (
+                    <li key={i}>{i}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* --------------------------------------------------------- sobre */}
         <section className="faixa secao" id="sobre">
           <div className="secao-topo">
-            <h2>Quem fala com você</h2>
+            <h2>Quem está por trás</h2>
           </div>
 
           <div className="sobre">
@@ -292,23 +332,28 @@ export default function App() {
             </div>
 
             <div className="sobre-texto">
+              <p className="sobre-cargo">Fundador e CEO</p>
               <p>
-                Me chamo <strong>Lucas Figueiredo Fernandes</strong> e a LFF
-                Industries sou eu. Quem responde a sua mensagem, desenha a tela,
-                escreve o código e publica o site é a mesma pessoa.
+                <strong>Lucas Figueiredo Fernandes</strong> fundou a LFF
+                Industries em Santa Rita do Sapucaí, no Sul de Minas, para
+                entregar tecnologia aplicada a problemas comerciais e
+                operacionais de empresas.
               </p>
               <p>
-                Trabalho assim por escolha. Como eu mesmo escrevo o texto e
-                desenho o layout, consigo mudar a estrutura da página quando o
-                conteúdo pede, em vez de encaixar o conteúdo num template.
-                Quando instalo o tracking, sei quais eventos importam porque fui
-                eu que montei o caminho até o contato.
+                Antes da LFF, trabalhou com tracking e performance em operações
+                de mídia digital. É dali que vem o cuidado com medição: um site
+                da LFF não é entregue sem saber de onde vem cada contato.
               </p>
               <p>
-                Na prática isso significa conversa direta, sem atendimento
-                intermediário, e um escopo escrito antes de qualquer linha de
-                código. Se eu achar que o que você precisa não é um site,
-                prefiro dizer isso logo.
+                Quando o projeto pede, a LFF reúne colaboradores contratados
+                por projeto, em design, conteúdo e desenvolvimento, para
+                ganhar prazo sem perder o padrão de entrega.
+              </p>
+              <p>
+                Todo projeto tem o fundador envolvido do primeiro contato à
+                publicação. Na prática isso significa conversa direta, escopo
+                escrito antes de qualquer linha de código e, se o que você
+                precisa não for um site, isso é dito logo no começo.
               </p>
             </div>
           </div>
@@ -322,11 +367,11 @@ export default function App() {
 
           <ol className="processo">
             {[
-              ['Conversa', 'Você me conta o objetivo e eu pergunto o que ainda falta decidir.'],
-              ['Escopo', 'Mando por escrito o que será feito, o prazo e o investimento.'],
-              ['Direção visual', 'Mostro a direção antes de programar, para ajustar cedo.'],
-              ['Desenvolvimento', 'Construo e vou mostrando o progresso num endereço de teste.'],
-              ['Publicação', 'Testo em várias larguras, publico e confiro no site já no ar.'],
+              ['Conversa', 'Você conta o objetivo e a LFF levanta o que ainda falta decidir.'],
+              ['Escopo', 'Você recebe por escrito o que será feito, o prazo e o investimento.'],
+              ['Direção visual', 'A direção visual é apresentada antes de programar, para ajustar cedo.'],
+              ['Desenvolvimento', 'O progresso fica visível num endereço de teste durante a construção.'],
+              ['Publicação', 'Testes em várias larguras, publicação e conferência no site já no ar.'],
             ].map(([nome, texto], i) => (
               <li className="passo" key={nome}>
                 <p className="passo-indice">{String(i + 1).padStart(2, '0')}</p>
@@ -340,10 +385,10 @@ export default function App() {
         {/* -------------------------------------------------------- contato */}
         <section className="contato" id="contato">
           <div className="faixa contato-interno">
-            <h2>Tem um projeto em mente? Me conta o que precisa funcionar melhor.</h2>
+            <h2>Tem um projeto em mente? Conte o que precisa funcionar melhor.</h2>
             <p>
-              Respondo pessoalmente, normalmente no mesmo dia. Pode mandar o
-              link do site atual, um print ou só a ideia solta.
+              Resposta normalmente no mesmo dia útil, direto com quem vai tocar o
+              projeto. Pode mandar o link do site atual, um print ou só a ideia solta.
             </p>
             <div className="contato-canais">
               <a
@@ -386,7 +431,7 @@ export default function App() {
 
       <div className="barra-movel">
         <a className="link-acao" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-          Falar comigo no WhatsApp
+          Falar com a LFF no WhatsApp
         </a>
       </div>
     </>

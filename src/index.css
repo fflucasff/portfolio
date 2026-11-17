@@ -686,6 +686,7 @@ h3 {
 /* ------------------------------------------------------------- processo */
 
 .processo {
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   border-top: 2px solid var(--tinta);
@@ -959,4 +960,62 @@ h3 {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ---------------------------------------------------------------- números */
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 2px solid var(--tinta);
+  border-bottom: 1px solid var(--linha);
+  margin-bottom: clamp(48px, 7vw, 96px);
+}
+.numero { padding: 22px 20px 22px 0; border-right: 1px solid var(--linha); }
+.numero:last-child { border-right: none; }
+.numero + .numero { padding-left: 20px; }
+.numero-valor {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.05;
+  color: var(--cobalto);
+}
+.numero-rotulo { margin-top: 6px; color: var(--cinza); font-size: 15px; }
+
+/* ------------------------------------------------------------ tecnologias */
+.stack {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 2px solid var(--tinta);
+}
+.stack-grupo { padding: 20px 20px 24px 0; border-right: 1px solid var(--linha); }
+.stack-grupo + .stack-grupo { padding-left: 20px; }
+.stack-grupo:last-child { border-right: none; }
+.stack-grupo h3 {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cobalto);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 14px;
+}
+.stack-grupo ul { list-style: none; display: grid; gap: 8px; }
+.stack-grupo li { font-size: 16px; }
+
+.sobre-cargo {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--cobalto);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 860px) {
+  .numeros, .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: none; }
+  .numero, .stack-grupo { border-top: 2px solid var(--tinta); border-right: none; padding-left: 0 !important; padding-right: 12px; }
+}
+@media (max-width: 520px) {
+  .stack { grid-template-columns: 1fr; }
 }
