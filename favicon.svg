@@ -1,5 +1,7 @@
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" fill="#2340e0"/>
-  <path d="M11 9v26.5h20" stroke="#ffffff" stroke-width="7.5" fill="none"/>
-  <path d="M37 39V22.5H21" stroke="#ffffff" stroke-width="7.5" fill="none"/>
+  <rect width="48" height="48" rx="11" fill="#2340e0"/>
+  <g transform="translate(9.6 9.6) scale(0.6)">
+    <path d="M10.5 7v27.5H32" stroke="#ffffff" stroke-width="7" fill="none"/>
+    <path d="M38 41V20.5H21" stroke="#ffffff" stroke-width="7" fill="none"/>
+  </g>
 </svg>
