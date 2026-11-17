@@ -479,10 +479,6 @@ export default function App() {
               Pode mandar o link do site atual, um print ou só a ideia solta. Quem
               responde é quem vai tocar o projeto.
             </p>
-            <p className="contato-prazo">
-              <strong>Quer o site no ar antes do Natal?</strong> Landing pages
-              fechadas até 11 de dezembro são entregues até 22 de dezembro.
-            </p>
             <div className="contato-canais">
               <a
                 className="canal canal-principal"
@@ -504,7 +500,7 @@ export default function App() {
         <div className="faixa rodape-interno">
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 9 }}>
             <Simbolo size={20} cor="#a8aaa2" />
-            LFF Industries, {new Date().getFullYear()}
+            LFF Industries · desde 2025
           </span>
           <div className="rodape-links">
             <a href="https://github.com/fflucasff" target="_blank" rel="noopener noreferrer">
