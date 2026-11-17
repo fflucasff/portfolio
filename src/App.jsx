@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { Check, MessageCircle } from 'lucide-react'
 import Marca, { Simbolo } from './components/Marca'
 import { NATUREZA, conceituais, destaques, outros } from './data/projetos'
 
 const WHATSAPP =
   'https://wa.me/5535991623621?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LFF%20Industries%20e%20quero%20conversar%20sobre%20um%20projeto.'
 const EMAIL = 'mailto:lff.industries@gmail.com'
+
 
 const navegacao = [
   { id: 'trabalho', rotulo: 'Trabalho' },
@@ -210,49 +212,10 @@ export default function App() {
         <section className="faixa secao" id="servicos">
           <div className="secao-topo">
             <h2>O que a LFF faz</h2>
-            <p>Três frentes. Na prática, a maioria dos projetos mistura duas.</p>
+            <p>Seis frentes. A maioria dos projetos combina duas ou três.</p>
           </div>
 
-          <div className="servicos">
-            <article className="servico">
-              <h3>Sites e landing pages</h3>
-              <p>
-                Página única ou site completo, escrito e desenhado do zero.
-                Entregue publicado, com domínio apontado e medição funcionando.
-              </p>
-              <ul>
-                <li>Redação do conteúdo junto com você</li>
-                <li>Layout desenhado para o seu caso, sem tema pronto</li>
-                <li>Formulário ou WhatsApp, conferidos depois de publicar</li>
-              </ul>
-            </article>
-
-            <article className="servico">
-              <h3>Sistemas e ferramentas</h3>
-              <p>
-                Quando uma planilha já não dá conta. Aplicações que rodam no
-                navegador, com a regra de negócio testada.
-              </p>
-              <ul>
-                <li>Cálculo, cadastro e geração de documento</li>
-                <li>Testes automatizados nas regras que não podem errar</li>
-                <li>Publicação e manutenção combinadas antes de começar</li>
-              </ul>
-            </article>
-
-            <article className="servico">
-              <h3>Tracking e integrações</h3>
-              <p>
-                Saber de onde vem cada contato. Os eventos são instalados,
-                nomeados e conferidos com você depois que o site está no ar.
-              </p>
-              <ul>
-                <li>Google Tag Manager, Analytics e Meta Pixel</li>
-                <li>Eventos nomeados conforme o que você precisa acompanhar</li>
-                <li>Conferência dos disparos na versão publicada</li>
-              </ul>
-            </article>
-          </div>
+          <Bento />
 
           <div className="investimento">
             <div>
@@ -284,6 +247,58 @@ export default function App() {
               <p className="investimento-regra">
                 Escopo e investimento definidos antes do início do projeto.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ------------------------------------------------------ tracking */}
+        <section className="secao-tinta" id="tracking">
+          <div className="faixa secao">
+            <p className="tracking-rotulo">Tracking</p>
+            <h2 className="tracking-titulo">Não é o criativo. Não é o público. É o dado.</h2>
+
+            <div className="tracking-corpo">
+              <div>
+                <p className="tracking-lead">
+                  Se a campanha que vendia parou do nada, se o painel da Meta
+                  mostra um número e o caixa mostra outro, se ninguém sabe dizer
+                  de onde veio a última venda, o problema quase nunca está onde
+                  todo mundo procura.
+                </p>
+                <p>
+                  Quando a venda chega pela metade na Meta, o algoritmo aprende
+                  pela metade. Ele passa a buscar gente parecida com quem clica,
+                  não com quem compra. E nenhum criativo novo resolve isso.
+                </p>
+                <p className="tracking-soco">
+                  Antes de aumentar o orçamento, descubra o que o seu pixel está
+                  deixando escapar.
+                </p>
+              </div>
+
+              <div>
+                <p className="tracking-subtitulo">O que a LFF instala e confere</p>
+                <ul className="tracking-lista">
+                  <li>API de Conversões da Meta, com deduplicação de eventos</li>
+                  <li>GTM server-side, pra parar de depender só do navegador</li>
+                  <li>Postback e atribuição com RedTrack</li>
+                  <li>Eventos separados por tipo de venda quando a URL não diferencia nada</li>
+                  <li>Conferência de cada disparo na versão publicada, não no teste</li>
+                </ul>
+                <p className="tracking-agencia">
+                  <strong>Atende cliente final?</strong> A LFF entra white label:
+                  você entrega, a gente configura e confere. Seu cliente não fica
+                  sabendo.
+                </p>
+                <a
+                  className="link-acao link-acao-claro"
+                  href="https://wa.me/5535991623621?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20LFF%20Industries%20e%20quero%20saber%20o%20que%20o%20meu%20pixel%20est%C3%A1%20perdendo."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Descobrir o que meu pixel está perdendo
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -528,6 +543,114 @@ function Bloco({ titulo, texto }) {
     <div className="caso-bloco">
       <h4>{titulo}</h4>
       <p>{texto}</p>
+    </div>
+  )
+}
+
+function Bento() {
+  return (
+    <div className="bento">
+      {/* Landing page: destaque */}
+      <article className="tile tile-lp">
+        <div className="tile-texto">
+          <p className="tile-tipo">Conversão</p>
+          <h3>Landing Page</h3>
+          <p className="tile-golpe">
+            Uma página feita pra uma ação só: chamar no WhatsApp, agendar ou
+            comprar. Copy escrita com você, layout sem template e pixel no ar.
+          </p>
+          <p className="tile-preco">
+            <strong>A partir de R$ 1.299</strong>
+            <span>7 dias úteis</span>
+          </p>
+        </div>
+        <div className="vis-lp" aria-hidden="true">
+          <div className="vis-navegador">
+            <span /><span /><span />
+          </div>
+          <div className="vis-pagina">
+            <i className="l1" /><i className="l2" /><i className="l3" />
+            <b className="vis-botao">
+              <MessageCircle size={13} strokeWidth={2.4} /> Falar no WhatsApp
+            </b>
+            <em className="vis-cursor" />
+          </div>
+        </div>
+      </article>
+
+      {/* Tracking */}
+      <article className="tile tile-trk">
+        <p className="tile-tipo">Precisão</p>
+        <h3>Tracking</h3>
+        <p className="tile-golpe">
+          Cada venda chega inteira na Meta, e o algoritmo aprende com quem compra.
+        </p>
+        <ul className="vis-log" aria-hidden="true">
+          <li><span>Purchase</span><em>CAPI</em><Check size={14} /></li>
+          <li><span>Lead</span><em>server-side</em><Check size={14} /></li>
+          <li><span>Deduplicação</span><em>event_id</em><Check size={14} /></li>
+          <li><span>Postback</span><em>RedTrack</em><Check size={14} /></li>
+        </ul>
+      </article>
+
+      {/* Site */}
+      <article className="tile">
+        <div className="vis-site" aria-hidden="true">
+          <span className="logo" /><span /><span /><span /><b />
+        </div>
+        <p className="tile-tipo">Autoridade</p>
+        <h3>Site Institucional</h3>
+        <p className="tile-golpe">
+          O endereço que faz o cliente confiar antes da primeira mensagem.
+          Domínio, e-mail e SSL configurados.
+        </p>
+      </article>
+
+      {/* Sistema */}
+      <article className="tile">
+        <div className="vis-barras" aria-hidden="true">
+          {[42, 68, 54, 86, 61, 74].map((h, i) => (
+            <span key={i} style={{ height: `${h}%` }} />
+          ))}
+        </div>
+        <p className="tile-tipo">Operação</p>
+        <h3>Sistema Web</h3>
+        <p className="tile-golpe">
+          Pra quando a planilha já não dá conta. Cadastro, cálculo, documentos e
+          login por nível de acesso.
+        </p>
+      </article>
+
+      {/* Automação */}
+      <article className="tile">
+        <div className="vis-fluxo" aria-hidden="true">
+          <span>WhatsApp</span><i /><span>CRM</span><i /><span>Planilha</span>
+        </div>
+        <p className="tile-tipo">Velocidade</p>
+        <h3>Automação</h3>
+        <p className="tile-golpe">
+          O trabalho repetido sai da mão de alguém e passa a acontecer sozinho,
+          com IA onde faz sentido.
+        </p>
+      </article>
+
+      {/* Integrações */}
+      <article className="tile tile-int">
+        <div className="tile-texto">
+          <p className="tile-tipo">Conexão</p>
+          <h3>Integrações e APIs</h3>
+          <p className="tile-golpe">
+            Sistemas que não conversavam passam a conversar. Ninguém digita o
+            mesmo dado duas vezes, e você fica sabendo quando algo falha.
+          </p>
+        </div>
+        <div className="vis-hub" aria-hidden="true">
+          {['Loja', 'CRM', 'ERP', 'Pagamento', 'WhatsApp', 'Planilha'].map((n) => (
+            <span key={n}>{n}</span>
+          ))}
+          <b>API</b>
+        </div>
+      </article>
     </div>
   )
 }
